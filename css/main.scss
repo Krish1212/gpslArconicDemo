@@ -13,7 +13,7 @@
     .logo{
         margin:6vh 10vh 0;
     }
-    .title{
+    .title, .subtitle{
         color:white;
         text-align:center;
         font-size: 30px;
@@ -42,7 +42,7 @@
     }
 }
 .plant.container{
-    position:absolute;
+    position:relative;
     display:block;
     width:80%;
     height:100%;
