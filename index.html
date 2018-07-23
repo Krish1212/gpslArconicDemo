@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	.branding{
+		width:auto;
+		height:55vh;
+	}
+	.bg-logo {
+		background: #1e1148 url('images/code-bg.png') no-repeat bottom right; position: absolute;
+		height: 55vh;
+		width:100%;
+	}
+	.logo{
+		margin:6vh 10vh 0;
+	}
+	.branding .title{
+		color:white;
+		text-align:center;
+		font-size: 30px;
+		text-transform:uppercase;
+		letter-spacing:2px;
+	}
+	
+	.banner{
+		position:relative;
+		z-index:99;
+		text-align:center;
+		margin:-15vh 4vh;
+	}
+	.banner .items {
+		display:inline-block;
+		min-width:160px;
+		min-height:160px;
+		width: 4wh;
+		height: 4vh;
+		border-radius:50%;
+	}
+	.banner .items.item-1{
+		background: url('images/banner-1.jpg') no-repeat;
+		background-size: cover;
+	}
+</style>
+</head>
+
+<body>
+
+
+
+<div class="branding">
+	<div class="bg-logo">
+		<div class="logo">
+			<a href="/"><img src="images/gpsl-logo.png"/></a>
+		</div>
+		<div class="title">Arconic Web Application</div>
+	</div>
+</div>
+
+
+
+<div class="banner">
+	<div class="items item-1"></div>
+	<div class="items item-1"></div>
+	<div class="items item-1"></div>
+</div>
+
+</body>
+
+</html>
