@@ -6,7 +6,7 @@
     width:auto;
     height:55vh;
     .bg-logo {
-        background: #1e1148 url('images/code-bg.png') no-repeat bottom right; position: absolute;
+        background: #1e1148 url('../images/code-bg.png') no-repeat bottom right; position: absolute;
         height: 55vh;
         width:100%;
     }
@@ -37,7 +37,7 @@
         border-radius:50%;
     }
     .items.item-1{
-        background: url('images/banner-1.jpg') no-repeat;
+        background: url('../images/banner-1.jpg') no-repeat;
         background-size: cover;
     }
 }
