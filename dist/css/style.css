@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.branding {
+  width: auto;
+  height: 55vh; }
+  .branding .bg-logo {
+    background: #1e1148 url("images/code-bg.png") no-repeat bottom right;
+    position: absolute;
+    height: 55vh;
+    width: 100%; }
+  .branding .logo {
+    margin: 6vh 10vh 0; }
+  .branding .title {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+
+.banner {
+  position: relative;
+  z-index: 99;
+  text-align: center;
+  margin: -15vh 4vh; }
+  .banner .items {
+    display: inline-block;
+    min-width: 160px;
+    min-height: 160px;
+    width: 4wh;
+    height: 4vh;
+    border-radius: 50%; }
+  .banner .items.item-1 {
+    background: url("images/banner-1.jpg") no-repeat;
+    background-size: cover; }
