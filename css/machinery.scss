@@ -1,3 +1,6 @@
+@import "variables";
+@import "font";
+
 .machinery.container{
     .item{
         position: relative;
@@ -5,8 +8,13 @@
         max-width:960px;
         padding-right:10px;
         padding-left:10px;
+        .comments{
+            // display:inline-block;
+            float:left;
+        }
         a{
             position: relative;
+            display:block;
             float:left;
             margin-right:2%;
             min-height:250px;
@@ -16,18 +24,20 @@
             text-decoration:none;
             p{
                 position: relative;
+                font-family:$font;
                 font-size:1.5em;
                 font-weight:bold;
                 padding:2%;
-                width:96%;
+                // width:96%;
                 text-align:center;
                 color:#f5f5f5;
                 background:#483011;
             }
             img{
-                position: absolute;
+                position:absolute;
                 padding:1%;
                 width:98%;
+                min-height:80%;
             }
         }
     }
