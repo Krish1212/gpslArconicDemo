@@ -35,9 +35,10 @@
             }
         }
         .comments-block{
-            display:none;
+            display:block;
+            word-wrap:none;
             position:relative;
-            width:0%;
+            width:100%;
             min-height:250px;
             padding:2%;
             border: 1.5px solid #01B0BA;
@@ -49,11 +50,6 @@
                     padding:1%;
                 }
             }
-        }
-        &:hover .comments-block, &:active .comments-block{
-            display:block;
-            word-wrap: none;
-            width:100%;
         }
     }
     .feedback{

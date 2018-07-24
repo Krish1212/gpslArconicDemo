@@ -28,12 +28,15 @@ gulp.task('sass', function() {
 
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
-    return gulp.src(['js/*.js'])
+    gulp.src(['js/*.js'])
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('./dist/js'))
         .pipe(rename('bundle.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
+
+    return gulp.src(['js/libs/*.js'])
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 // COPY files
