@@ -1,13 +1,21 @@
 .header {
-  height: 90px;
+  height: 80px;
   background: black;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 1px solid transparent; }
   .header .logo {
     background: url(../images/logo.svg) no-repeat;
-    width: 100%;
+    width: 20%;
     height: 60px;
-    margin: 15px;
-    box-sizing: border-box; }
+    margin: 8px;
+    box-sizing: border-box;
+    display: inline-block; }
+  .header .title {
+    display: inline-block;
+    color: white;
+    font-size: 34px;
+    vertical-align: 26px;
+    margin-left: 24px; }
 
 .machinery.container .item {
   position: relative;
