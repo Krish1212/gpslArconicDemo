@@ -14,7 +14,7 @@ body{
 }
 
 .branding{
-	background-color:$themecolor;
+	background-color: $themecolor;
 	.hidden-xs{
 		position:absolute;
 		display:block;
@@ -38,7 +38,7 @@ body{
     }
 	.title{
         position: relative;
-        color:black;
+        color:white;
         text-align:center;
 		margin-top:70px;
 		margin-left:4px;
@@ -50,6 +50,8 @@ body{
 		vertical-align:middle;
 		line-height:6vw;
 		min-height: 100px;
+		font-family : $font;
+		font-weight: bold;
     }
     .subtitle{
         position: relative;
