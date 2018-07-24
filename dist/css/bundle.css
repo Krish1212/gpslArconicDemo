@@ -44,17 +44,32 @@
   box-sizing: border-box; }
 
 .branding {
+  position: absolute;
   display: block;
-  background: #483011;
+  background: url("../images/banners/home-hero-cover.png");
   width: 100%;
-  height: 55vh; }
+  height: 100%; }
   .branding .logo {
     position: relative;
-    margin: 0vh 8vh 0;
+    margin: 0vh 5vh 0;
     min-width: 160px;
     width: 16vw;
     height: auto; }
-  .branding .title, .branding .subtitle {
+  .branding .title {
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 4px;
+    font-size: calc(20px + 2vw);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: 25vw;
+    min-width: 160px;
+    vertical-align: middle;
+    line-height: 6vw;
+    min-height: 100px; }
+  .branding .subtitle {
     position: relative;
     color: white;
     text-align: center;
@@ -62,29 +77,6 @@
     font-size: calc(20px + 2vw);
     text-transform: uppercase;
     letter-spacing: 2px; }
-
-.banner {
-  position: relative;
-  z-index: 99;
-  text-align: center;
-  margin: -10vh 4vh; }
-  .banner .items {
-    display: inline-block;
-    min-width: 120px;
-    min-height: 120px;
-    margin-right: 24px;
-    width: 18vw;
-    height: 18vw;
-    border-radius: 8px; }
-  .banner .items.item-1 {
-    background: url("../images/banners/banner-1.jpg") no-repeat;
-    background-size: cover; }
-  .banner .items.item-2 {
-    background: url("../images/banners/banner-2.jpg") no-repeat;
-    background-size: cover; }
-  .banner .items.item-3 {
-    background: url("../images/banners/banner-3.jpg") no-repeat;
-    background-size: cover; }
 
 .plant.container {
   position: relative;

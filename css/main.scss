@@ -8,18 +8,34 @@
 }
 
 .branding{
+	position: absolute;
     display:block;
-    background: $themecolor;
+    background: url('../images/banners/home-hero-cover.png');
     width:100%;
-    height:55vh;
+    height:100%;
     .logo{
         position: relative;
-        margin:0vh 8vh 0;
+        margin:0vh 5vh 0;
         min-width:160px;
 		width:16vw;
 		height:auto;
     }
-    .title, .subtitle{
+	.title{
+        position: relative;
+        color:white;
+        text-align:center;
+		margin-top:70px;
+		margin-left:4px;
+	    font-size: calc(20px + 2vw);
+        text-transform:capitalize;
+        letter-spacing:2px;
+		width:25vw;
+		min-width:160px;
+		vertical-align:middle;
+		line-height:6vw;
+		min-height: 100px;
+    }
+    .subtitle{
         position: relative;
         color:white;
         text-align:center;
@@ -30,30 +46,3 @@
     }
 }
 
-.banner{
-    position:relative;
-    z-index:99;
-    text-align:center;
-    margin:-10vh 4vh;
-    .items {
-        display:inline-block;
-        min-width:120px;
-        min-height:120px;
-        margin-right: 24px;
-        width: 18vw;
-        height: 18vw;
-        border-radius:8px;
-    }
-    .items.item-1{
-        background: url('../images/banners/banner-1.jpg') no-repeat;
-        background-size: cover;
-    }
-	.items.item-2{
-        background: url('../images/banners/banner-2.jpg') no-repeat;
-        background-size: cover;
-    }
-	.items.item-3{
-        background: url('../images/banners/banner-3.jpg') no-repeat;
-        background-size: cover;
-    }
-}
