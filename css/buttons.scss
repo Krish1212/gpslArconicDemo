@@ -1,23 +1,26 @@
+@import "variables";
+
 .btn{
     display: inline-block;
-    padding: 18px;
+    padding: 12px 0;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     border: 1px solid transparent;
     border-radius: 4px;
     width:90%;
+    max-width: 300px;
     margin: 9px 12px 12px 9px;
     font-size: calc(12px + 0.3vw);
     transition: all 0.4s;
 }
 .btn-primary {
     color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+    background-color: $buttoncolor;
+    border-color: $buttoncolor;
 }
 .btn:hover{
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
+    background-color: $buttoncolorhover;
+    border-color: $buttoncolorhover;
 }
