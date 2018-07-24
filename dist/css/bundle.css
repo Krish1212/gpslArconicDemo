@@ -1,3 +1,32 @@
+.machinery.container .item {
+  position: relative;
+  margin: 3% auto;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px; }
+  .machinery.container .item a {
+    position: relative;
+    float: left;
+    margin-right: 2%;
+    min-height: 250px;
+    width: 30%;
+    max-height: 40%;
+    border: 2px solid blue;
+    text-decoration: none; }
+    .machinery.container .item a p {
+      position: relative;
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 2%;
+      width: 96%;
+      text-align: center;
+      color: #f5f5f5;
+      background: #483011; }
+    .machinery.container .item a img {
+      position: absolute;
+      padding: 1%;
+      width: 98%; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -83,32 +112,3 @@
   .plant.container .box:hover {
     background: #f5f5f5;
     opacity: 0.5; }
-
-.machinery.container .item {
-  position: relative;
-  margin: 3% auto;
-  max-width: 960px;
-  padding-right: 10px;
-  padding-left: 10px; }
-  .machinery.container .item a {
-    position: relative;
-    float: left;
-    margin-right: 2%;
-    min-height: 250px;
-    max-width: 30%;
-    max-height: 40%;
-    border: 2px solid blue;
-    text-decoration: none; }
-    .machinery.container .item a p {
-      position: relative;
-      font-size: 1.5em;
-      font-weight: bold;
-      padding: 2%;
-      width: 96%;
-      text-align: center;
-      color: #f5f5f5;
-      background: #483011; }
-    .machinery.container .item a img {
-      position: absolute;
-      padding: 1%;
-      width: 98%; }
