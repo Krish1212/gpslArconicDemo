@@ -16,6 +16,7 @@
             max-height:40%;
             border:2px solid #01B0BA;
             text-decoration:none;
+            z-index:99;
             p{
                 position: relative;
                 font-family:$font;
@@ -49,10 +50,22 @@
                 }
             }
         }
-        &:hover .comments-block{
+        &:hover .comments-block, &:active .comments-block{
             display:block;
             word-wrap: none;
             width:100%;
+        }
+    }
+    .feedback{
+        position:relative;
+        clear:left;
+        margin:3% auto;
+        max-width:960px;
+        padding-right:10px;
+        padding-left:10px;
+        textarea{
+            position:relative;
+            width:90%;
         }
     }
 }
