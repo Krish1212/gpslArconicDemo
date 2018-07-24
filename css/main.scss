@@ -1,10 +1,14 @@
+@import "variables";
+@import "font";
+
 *{
     margin:0;
     padding:0;
 }
+
 .branding{
     display:block;
-    background: #483011;
+    background: $themecolor;
     width:100%;
     height:55vh;
     .logo{
