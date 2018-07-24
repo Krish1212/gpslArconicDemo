@@ -2,12 +2,19 @@
     position: relative;
     .image{
         display: inline-block;
-        border:1px solid red;
+        width:70%;
+        border-left:1px solid #cccccc;
+        padding-left: 6px;
+        img{
+            width: 98%;
+            max-width: 100%;
+            height: auto;
+        }
     }
     .leftbar{
         display: inline-block;
-        width:20%;
+        width: 20%;
         height: 50%;
-        border:1px solid red;
+        vertical-align: top;
     }
 }
