@@ -36,13 +36,13 @@
     height: 18vw;
     border-radius: 8px; }
   .banner .items.item-1 {
-    background: url("../images/banner-1.jpg") no-repeat;
+    background: url("../images/banners/banner-1.jpg") no-repeat;
     background-size: cover; }
   .banner .items.item-2 {
-    background: url("../images/banner-2.jpg") no-repeat;
+    background: url("../images/banners/banner-2.jpg") no-repeat;
     background-size: cover; }
   .banner .items.item-3 {
-    background: url("../images/banner-3.jpg") no-repeat;
+    background: url("../images/banners/banner-3.jpg") no-repeat;
     background-size: cover; }
 
 .plant.container {
