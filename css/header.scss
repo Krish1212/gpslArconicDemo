@@ -1,23 +1,22 @@
 .header{
-    height: 80px;
-    background: black;
-    box-sizing: border-box;
-    border: 1px solid transparent;
+	display: inline-table;
+    height:80px;
+	width:100%;
+	background:black;
+    padding:6px;
     .logo{
-        background: url(../images/logo.svg) no-repeat;
-        width: 20%;
-        height: 60px;
-        margin: 8px;
-        box-sizing: border-box;
-        display: inline-block;
+        display: table-cell;
+        vertical-align: middle;
+        width: 14%;
+        min-width: 120px;
     }
     .title{
-        display: inline-block;
-        color: white;
+        display: table-cell;
+        padding-left:5%;
+        vertical-align: middle;
+        color:white;
         font-weight: lighter;
-        font-size: 34px;
-        vertical-align: 25px;
-        margin-left: 24px;
+        font-size: calc(16px + 1.1vw);
     }
 
 }
