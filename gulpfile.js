@@ -17,11 +17,11 @@ gulp.task('lint', function() {
 
 // Compile Our Sass
 gulp.task('sass', function() {
-    return gulp.src(['css/main.scss'])
-		.pipe(concat('style.css'))
+    return gulp.src(['css/*.scss'])
+		.pipe(concat('bundle'))
         .pipe(sass())
         .pipe(gulp.dest('./dist/css'))
-        .pipe(rename('style.min.css'))
+        .pipe(rename('bundle.min.css'))
         .pipe(minifyCSS())
         .pipe(gulp.dest('./dist/css'));
 });
