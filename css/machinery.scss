@@ -1,7 +1,7 @@
 .machinery.container{
     .item{
         position: relative;
-        margin:3% auto;
+        margin:1% auto;
         max-width:960px;
         padding-right:10px;
         padding-left:10px;
@@ -10,7 +10,6 @@
             position: relative;
             float:left;
             margin-right:2%;
-            margin-bottom:1%;
             min-height:250px;
             width:30%;
             max-height:40%;
@@ -61,7 +60,26 @@
         padding-left:10px;
         textarea{
             position:relative;
-            width:90%;
+            width:100%;
+        }
+        .button-bar{
+            text-align:right;
+            input.button{
+                padding:1%;
+                color: #fff;
+                cursor:pointer;
+                font-size: calc(12px + 0.3vw);
+                transition: all 0.4s;
+                background-color: $buttoncolor;
+                border-color: $buttoncolor;
+                border: 1px solid transparent;
+                border-radius: 4px;
+                &:hover{
+                    color: #fff;
+                    background-color: $buttoncolorhover;
+                    border-color: $buttoncolorhover;
+                }
+            }
         }
     }
 }
