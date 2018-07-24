@@ -1,6 +1,8 @@
 @import "variables";
 @import "font";
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
 *{
     margin:0;
     padding:0;
@@ -8,7 +10,7 @@
 }
 
 body{
-    font-family: $font;
+    font-family: 'Roboto', sans-serif;
 }
 
 .branding{
@@ -40,16 +42,16 @@ body{
         text-align:center;
 		margin-top:70px;
 		margin-left:4px;
-	    font-size: calc(20px + 2vw);
+	    font-size: 200%;
         text-transform:capitalize;
         letter-spacing:2px;
 		width:25vw;
 		min-width:160px;
+		min-height:160px;
 		vertical-align:middle;
-		line-height:6vw;
-		min-height: 100px;
+		min-line-height:6vw;				
 		font-family : $font;
-		font-weight: bold;
+		font-weight: thinner;		
     }
     .subtitle{
         position: relative;
@@ -68,8 +70,9 @@ body{
 }
 
 .searchTerm {
-position:absolute;
+  position:absolute;
   float: left;
+  min-width: 40%;
   width: 80%;
   border: 3px solid #00B4CC;
   padding: 5px;
@@ -95,8 +98,7 @@ position:absolute;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 40px;
- 
+  font-size: 40px; 
 }
 /*Resize the wrap to see the search bar change!*/
 .wrap{
