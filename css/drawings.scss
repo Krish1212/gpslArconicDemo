@@ -1,20 +1,38 @@
 .drawings{
     position: relative;
+    margin-top:12px;
+    display: inline-table;
+    .leftbar{
+        display: table-cell;
+        width: 20%;
+        vertical-align: top;
+        text-align: center;
+    }
     .image{
-        display: inline-block;
-        width:70%;
+        display: table-cell;
+        width:95%;
         border-left:1px solid #cccccc;
         padding-left: 6px;
+        text-align: center;
         img{
             width: 98%;
             max-width: 100%;
             height: auto;
         }
     }
-    .leftbar{
-        display: inline-block;
-        width: 20%;
-        height: 50%;
-        vertical-align: top;
+}
+
+@media (max-width: 600px) {
+    .drawings{
+        .leftbar{
+            width:100%;
+            .btn{
+                max-width: 180px;
+            }
+        }
+        .image{
+            width:95%;
+        }
+
     }
 }

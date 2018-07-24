@@ -13,3 +13,10 @@
         opacity: 1;
     }    
 }
+
+@media (max-width: 600px){
+    .scroll-top{
+        border-width:2px;
+        padding:16px;
+    }
+}
