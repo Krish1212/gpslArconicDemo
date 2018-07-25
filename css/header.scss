@@ -18,5 +18,26 @@
         font-weight: lighter;
         font-size: calc(16px + 1.1vw);
     }
-
+    .cart-container{
+        width:60px;
+        position:relative;
+        display:table-cell;
+        text-align:right;
+        vertical-align:middle;
+        .cart img{
+            width:100%;
+        }
+        .item-count{
+            position: absolute;
+            display: none;
+            top: -5px;
+            left: -5px;
+            width: 25px;
+            height: 25px;
+            font-size:20px;
+            border-radius: 50%;
+            background: white;
+            text-align:center;
+        }
+    }
 }

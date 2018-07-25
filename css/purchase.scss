@@ -1,0 +1,112 @@
+.products.container{
+    position:relative;
+    width:100%;
+    height:auto;
+    margin: 0 auto;
+    margin-top:1%;
+    clear:both;
+    .product{
+        position: relative;
+        float:left;
+        font-size:0.9em;
+        width:20%;
+        background:rgba(1, 176, 186, 0.342);
+        border:1px solid #01B0BA;
+        min-height:160px;
+        margin:1%;
+        margin-bottom:3%;
+        .product-select{
+            display:none;
+        }
+        .product-select::before, .product-select::after{
+            content:'';
+            position: absolute;
+            top:0;right:0;
+            border-color:transparent;
+            border-style:solid;
+            z-index:10;
+        }
+        .product-select::before{
+            border-width: 1.5em;
+            border-right-color: #01B0BA;
+            border-top-color: #01B0BA;
+        }
+        .product-select::after{
+            border-radius: 0.4em;
+            border-width: 1.35em;
+            border-right-color: #0c0;
+            border-top-color: #0c0;
+        }
+        .product-no{
+            top:0;
+            left:2%;
+        }
+        .product-code{
+            position: absolute;
+            top:0;
+            right:2%;
+            width:50%;
+            text-align:right;
+        }
+        .product-photo{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }
+        .product-id{
+            position:absolute;
+            bottom:0;
+            left:2%;
+            width:50%;
+        }
+        .product-desc{
+            position: absolute;
+            bottom:0;
+            right:2%;
+            width:50%;
+            font-size:0.75em;
+            word-wrap: all;
+            text-align:right;
+        }
+        .product-count{
+            position:absolute;
+            left:0;
+            bottom:-15%;
+            clear:both;
+            width:100%;
+            display:none;
+            z-index:10;
+            input{
+                background-color: $buttoncolor;
+                border-color: $buttoncolor;
+                border: 1px solid transparent;
+                border-radius: 50%;
+            }
+            label{
+                margin:0 5px;
+                padding:0 5px;
+                float:right;
+                width:30px;
+                background:#01B0BA;
+                text-align:center;
+            }
+            input.add{
+                width:10%;
+                float:right;
+            }
+            input.remove{
+                width:10%;
+                float:right;
+            }
+        }
+    }
+    .product.active{
+        color:white;
+        border:2px solid #000;
+        background:#01B0BA;
+    }
+    .product.active .product-count{
+        display:block;
+    }
+}
