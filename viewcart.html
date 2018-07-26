@@ -14,7 +14,7 @@
     </div>
     <div class="viewcart container">
         <div class="cart-table"></div>
-        <input type="button" value="Checkout" class="button">
+        <button class="button active">Checkout</button>
     </div>
     <script src="js/jquery.min.js"></script>
     <script>
@@ -29,9 +29,27 @@
             $.each(cartItems, function(idx,obj){
                 prodTable += `<tr><td>` + ++idx + `</td><td>` + obj['product-quantity'] + `</td><td>` + obj['product-no'] + `</td><td>` + obj['product-code'] + `</td><td>` + obj['product-id'] + `</td><td>` + obj['product-desc'] + `</td><td></td><td></td></tr>`;
             });
+            prodTable += `</table>`;
             $('.cart-table').html(prodTable);
             $('.button').bind('click',function(){
-                alert('Cart items emailed to: mbakos@gpsl.co');
+                $.ajax({
+                    url:"send_email.php",
+                    type:"POST",
+                    data:{'message':prodTable},
+                    beforeSend: function(){
+                        $('.button').text('Sending Email...').addClass('process').removeClass('active').attr('disabled','disabled');
+                    },
+                    complete: function(){
+                        $('.button').text('Checkout').addClass('active').removeClass('process');
+                    },
+                    success: function(result){
+                        console.log(result);
+                        alert('Cart items emailed to: mbakos@gpsl.co');
+                    },
+                    error: function(error){
+                        console.error(error);
+                    }
+                });
             });
         });
     </script>

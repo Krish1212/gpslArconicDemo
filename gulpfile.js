@@ -41,13 +41,14 @@ gulp.task('scripts', function() {
 
 // COPY files
 gulp.task('copy', function() {
-    return gulp.src(['*.html'])
+    return gulp.src(['*.html','*.php'])
         .pipe(gulp.dest('./dist'));
 });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('*.html', ['copy']);
+    gulp.watch('*.php', ['copy']);
     gulp.watch('js/*.js', ['lint', 'scripts']);
     gulp.watch('css/*.scss', ['sass']);
 });
