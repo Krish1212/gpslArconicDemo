@@ -1,0 +1,30 @@
+    .comments{
+        &.add-comment-wrap{
+            position: absolute;
+            padding:9px;
+            width:auto;
+            height:auto;
+            border:1px solid grey;
+            background: #ccc;
+            border-radius: 8px;
+            z-index: 99;
+            &::before{
+                content: "Add comment:";
+            }
+            textarea{
+                display: block;
+            }
+            button{
+                margin-top: 6px;
+                padding: 3px 12px;
+                width: auto;
+                float: right;
+                display: block;
+                &::before{
+                    content: "Save!";
+                }
+            }
+            
+        }
+    }
+ 
