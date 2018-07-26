@@ -52,3 +52,17 @@
         border-radius: 4px;
     }
 }
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+    .button{
+        width:96%;
+    }
+}
+  
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+    .button{
+        width:96%;
+    }
+}

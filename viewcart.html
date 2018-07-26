@@ -14,7 +14,8 @@
     </div>
     <div class="viewcart container">
         <div class="cart-table"></div>
-        <button class="button active">Checkout</button>
+        <button id="checkout" class="button active">Checkout</button>
+        <button id="back" class="button active" onclick="history.back()"><< Back</button>
     </div>
     <script src="js/jquery.min.js"></script>
     <script>
@@ -31,16 +32,16 @@
             });
             prodTable += `</table>`;
             $('.cart-table').html(prodTable);
-            $('.button').bind('click',function(){
+            $('#checkout').bind('click',function(){
                 $.ajax({
                     url:"send_email.php",
                     type:"POST",
                     data:{'message':prodTable},
                     beforeSend: function(){
-                        $('.button').text('Sending Email...').addClass('process').removeClass('active').attr('disabled','disabled');
+                        $('#checkout').text('Sending Email...').addClass('process').removeClass('active').attr('disabled','disabled');
                     },
                     complete: function(){
-                        $('.button').text('Checkout').addClass('active').removeClass('process');
+                        $('#checkout').text('Checkout').addClass('active').removeClass('process');
                     },
                     success: function(result){
                         console.log(result);
