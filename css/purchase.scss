@@ -9,7 +9,7 @@
         position: relative;
         float:left;
         font-size:0.9em;
-        width:20%;
+        width:18%;
         background:rgba(1, 176, 186, 0.342);
         border:1px solid #01B0BA;
         min-height:160px;
@@ -110,8 +110,19 @@
         display:block;
     }
 }
-@media (max-width: 600px) {
-    .product{
-        width:100%;
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 992px) {
+    .products.container .product{
+        width:29%;
+        margin-bottom:4%;
+    }
+}
+  
+/* On screens that are 600px or less */
+@media screen and (max-width: 600px) {
+    .products.container .product{
+        width:48%;
+        margin-bottom:5%;
     }
 }
