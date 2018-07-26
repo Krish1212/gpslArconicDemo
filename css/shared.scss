@@ -9,6 +9,7 @@
     opacity: 0.75;
     transition: opacity 0.3s;
     cursor: pointer;
+    z-index: 100;
     &:hover{
         opacity: 1;
     }    
