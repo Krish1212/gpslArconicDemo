@@ -17,8 +17,10 @@ body{
 .branding-new{
 	background: #888888 url(../images/banners/home-hero-cover.png) no-repeat;
     height: 100vh;
-	width: 100%;
+    width: 100%;
     position: absolute;
+    background-size: cover;
+    background-position: 30% 29%;
 	.title{
 		position: absolute;
 		top: 130px;
@@ -31,8 +33,8 @@ body{
 	.ft_wrap{
 		position: absolute;
 		bottom: 24px;
-		width: 70%;
-		left: 44px;	
+		width: calc(100% - 44px);
+		left: 44px;
 		.searchengine{
 			display: inline-block;
 			width: 20%;
@@ -124,3 +126,13 @@ body{
     }
 }
 
+@media (max-width: 580px){
+	.mainmap{
+		display:block;
+	}
+	.searchengine{
+		
+		margin-top: 24px;
+		margin-left: 0 !important;
+	}
+}
