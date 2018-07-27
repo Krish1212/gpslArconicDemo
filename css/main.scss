@@ -14,6 +14,65 @@ body{
 	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
 }
 
+.branding-new{
+	background: #888888 url(../images/banners/home-hero-cover.png) no-repeat;
+    height: 100vh;
+	width: 100%;
+    position: absolute;
+	.title{
+		position: absolute;
+		top: 130px;
+		left: 44px;
+		z-index: 99;
+		font-size: calc(30px + 1vw);
+		color: white;
+		font-weight: 100
+	}
+	.ft_wrap{
+		position: absolute;
+		bottom: 24px;
+		width: 70%;
+		left: 44px;	
+		.searchengine{
+			display: inline-block;
+			width: 20%;
+			min-width: 312px;
+			min-height: 100px;
+			margin-left: 46px;
+			vertical-align: -60px;		
+		}
+		.mainmap{
+			display: inline-block;
+			bottom: 24px;
+			left: 44px;
+			padding-right: 14px;
+			transition: all 0.3s;
+			cursor: pointer;
+			a{
+				text-decoration: none;
+				color: white;
+				font-size: calc(12px + 1.25vw);
+				font-weight: 100;
+			}
+			&::before{
+				display: inline-block;
+				vertical-align: -14px;
+				content: "";
+				background: white url(../images/map_icon.png) no-repeat;
+				background-size: cover;
+				width: 46px;
+				margin-right: 12px;
+				height: 46px;
+				border: 3px solid white;
+			}
+			&:hover{
+				background: black;
+			}
+		}
+	}
+
+}
+
 .branding{
 	background-color: $themecolor;
 	.hidden-xs{
@@ -25,7 +84,7 @@ body{
 	}
 	.visible-xs{
 		position:absolute;
-		display:block;
+		display:none;
 		background-image: url('../images/banners/home-hero-cover.png') no-repeat;
 		width:100%;
 		height:100%;				
@@ -50,10 +109,9 @@ body{
 		min-width:160px;
 		min-height:160px;
 		vertical-align:middle;
-		min-line-height:6vw;
 		height:10vw;
 		font-family : $font;
-		font-weight: thinner;		
+		font-weight: 100;
     }
     .subtitle{
         position: relative;
@@ -66,22 +124,3 @@ body{
     }
 }
 
-.mainmap{
-		text-align:left;
-		min-height:50px;
-		min-width:50px;
-		font-size:calc(12px + 2vw);
-		font-weight:bold
-}
-
-.searchengine{
-		position: absolute;
-		display:block;
-		width:20%;
-		min-width:20%;
-		min-width:100px;
-		min-height:100px;
-		padding-top:285px;
-		margin-left:260px;
-		z-index:99;
-}
