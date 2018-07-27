@@ -20,9 +20,9 @@
                 width: auto;
                 float: right;
                 display: block;
-                &::before{
-                    content: "Save!";
-                }
+            }
+            button.save{
+                margin-left:6px;                
             }
             
         }

@@ -24,8 +24,10 @@ $(document).ready(function(){
     function setMousePosition(e) {
         var ev = e || window.event; //Moz || IE
         if (ev.pageX) { //Moz
-            mouse.x = ev.pageX + window.pageXOffset - canvasOffset.left;
-            mouse.y = ev.pageY + window.pageYOffset - canvasOffset.top;
+            //mouse.x = ev.pageX + window.pageXOffset - canvasOffset.left;
+            //mouse.y = ev.pageY + window.pageYOffset - canvasOffset.top;
+            mouse.x = ev.pageX - canvasOffset.left;
+            mouse.y = ev.pageY - canvasOffset.top;
         } else if (ev.clientX) { //IE
             mouse.x = ev.clientX + document.body.scrollLeft - canvasOffset.left;
             mouse.y = ev.clientY + document.body.scrollTop - canvasOffset.top;
@@ -85,11 +87,27 @@ $(document).ready(function(){
     });
 
     //$('body').on('click', '.comments.add-comment-wrap', function(ev){
-    $('body').on('click', canvas.find('.add-comment-wrap'), function(ev){
+    $('body').on('mousedown', '#canvas .add-comment-wrap', function(ev){
         ev.stopPropagation();
     });
     
+    $('body').on('mousedown', '#canvas .cancel', function(ev){
+        $(this).parents('.wrapper').remove();
+    });
 
+    $('body').on('keyup', '#canvas textarea', function(ev){
+        var savebtn = $('#canvas .save');
+        if( $(this).val().length > 0 ){
+            savebtn.prop('disabled', false);
+        }else{
+            savebtn.prop('disabled', 'disabled');
+        }
+    });
+
+    $('body').on('mousedown', '#canvas .save', function(ev){
+        alert('todo');
+    });
+    
 });
 
 
