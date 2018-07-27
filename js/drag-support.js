@@ -34,7 +34,7 @@ $(document).ready(function(){
         }
     }
    
-    $('body').on('mousemove', canvas, function(ev){
+    $('body').on('mousemove', '#canvas', function(ev){
         setMousePosition(ev);
         if (element !== null) {
             element.style.width = Math.abs(mouse.x - mouse.startX) + 'px';
@@ -46,7 +46,7 @@ $(document).ready(function(){
         }
     });
     
-    $('body').on('mousedown', canvas, function(ev){
+    $('body').on('mousedown', '#canvas', function(ev){
         if (element == null && !isDragged) {
             console.log("drag start");
             mouse.startX = mouse.x;
@@ -60,7 +60,7 @@ $(document).ready(function(){
         }
     });
     
-    $('body').on('mouseup', canvas, function(ev){
+    $('body').on('mouseup', '#canvas', function(ev){
         if (element !== null && isDragged) {
             canvasJSElement.style.cursor = "default";
             console.log("drag end");
@@ -105,9 +105,9 @@ $(document).ready(function(){
     });
 
     $('body').on('mousedown', '#canvas .save', function(ev){
+        console.log('json init status: ' + jComments.isInit );
+        jComments.init();
         alert('todo');
     });
     
 });
-
-

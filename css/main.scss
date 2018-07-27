@@ -10,7 +10,8 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
 }
 
 .branding{
