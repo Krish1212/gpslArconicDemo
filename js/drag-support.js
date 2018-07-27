@@ -104,10 +104,13 @@ $(document).ready(function(){
         }
     });
 
-    $('body').on('mousedown', '#canvas .save', function(ev){
-        console.log('json init status: ' + jComments.isInit );
-        jComments.init();
+    $('body').on('mousedown', '.todo', function(ev){
         alert('todo');
     });
     
+    $('.highlight').click(function(ev){
+        document.body.style.cursor = "crosshair";
+        $('#canvas').css({border:'3px dotted red'});
+    });
+
 });
