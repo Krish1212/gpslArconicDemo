@@ -4,6 +4,7 @@
 ?>
 <body>
     <?php 
+        $navtitle = "Plant Map";
         include_once('navbar.php');
     ?>
     <div class="plant container">
