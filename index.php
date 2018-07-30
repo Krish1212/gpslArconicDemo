@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>Arconic Web Application | GPSL</title>
-<link rel="stylesheet" href="css/bundle.css"/>
-</head>
-
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Home";
+  include_once('header.php');
+?>
 <body>
 
 <div class="header" style="position:absolute;z-index: 99;">
@@ -17,7 +13,7 @@
   <div class="title">Service <br>Application</div>
   <div class="ft_wrap">
     <div class="mainmap">
-      <a href="plant.html">Plant Map</a>
+      <a href="plant.php">Plant Map</a>
     </div>
     <div class="searchengine">
       <gcse:searchbox-only resultsUrl="searchpage.html" newWindow="true" queryParameterName="q"></gcse:searchbox-only>
@@ -36,19 +32,10 @@
 	<div class="title">Arconic <br>Web <br>Application</div>
 </div-->
 
-<script>
-  (function() {
-    var cx = '008683130934383105744:-8atcd4pn0k';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-
-
+<?php
+  $from = "home";
+  include_once('footer.php');
+?>
 </body>
 
 </html>

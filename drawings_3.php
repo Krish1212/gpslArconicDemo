@@ -1,23 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Arconic Service Application | GPSL</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bundle.css"/>
-</head>
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Hydraylic Drawings";
+  include_once('header.php');
+?>
 <body>
 
-    <div class="header">
-        <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
-        <div class="title">2500 Ton Hydraulic Press – Vane Pump Manual</div>
-    </div>
+    <?php 
+        $navtitle = "2500 Ton Hydraulic Press – Vane Pump Manual";
+        include_once('navbar.php');
+    ?>
 
     <object data="downloads/pll_2373.pdf" type="application/pdf" class="pdf-viewer" width="100%" height="100%" style="min-height: 800px">
         <p>Your browser doesn't support PDF viewer, so use this link to download.<br>
         <a href="downloads/pll_2373.pdf">Click here to download the PDF!</a></p>
     </object>
 
-    <script src="js/jquery.min.js"></script>
+    <?php
+        include_once('footer.php');
+    ?>
     <script>
         $(document).ready(function(){
             // set pdf viewer height dynamically

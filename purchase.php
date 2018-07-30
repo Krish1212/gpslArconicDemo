@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Arconic Service Application | GPSL</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bundle.css"/>
-</head>
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Purchase";
+  include_once('header.php');
+?>
 <body>
-    <div class="header">
-        <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
-        <div class="title">Order Products</div>
-        <div class="cart-container">
-            <div class="cart">
-                <img src="images/cart.svg" alt="">
-            </div>
-            <span class="item-count"></span>
-        </div>
-    </div>
+    <?php 
+        $navtitle = "Parts Shop";
+        $from = "purchase";
+        include_once('navbar.php');
+    ?>
 
     <div class="products container">
         <div class="product">

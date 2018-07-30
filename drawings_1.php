@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Arconic Service Application | GPSL</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bundle.css"/>
-</head>
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Wiring Diagram";
+  include_once('header.php');
+?>
 <body>
 
-    <div class="header">
-        <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
-        <div class="title">2500 Ton Hydraulic Press Wiring Diagram</div>
-    </div>
+    <?php 
+        $navtitle = "2500 Ton Hydraulic Press Wiring Diagram";
+        include_once('navbar.php');
+    ?>
 
     <div class="drawings">
         <div class="leftbar">
