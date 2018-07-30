@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Arconic Service Application | GPSL</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bundle.css"/>
-</head>
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Machines";
+  include_once('header.php');
+?>
+
 <body>
 
-    <div class="header">
-        <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
-        <div class="title">2500 Ton Hydraulic Press 2583</div>
-    </div>
-    <div class="cart-container">
-        <div class="cart">
-            <a href="purchase.html">Parts Shop </a>
-            <img src="images/cart.svg" alt="">
-        </div>
-        <span class="item-count"></span>
-    </div>
-
+    <?php 
+        $navtitle = "2500 Ton Hydraulic Press 2583";
+        $from = "machinery";
+        include_once('navbar.php');
+    ?>
     <div class="machinery container">
         <div class="item machine">
             <a href="drawings_1.html">
