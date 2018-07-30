@@ -12,16 +12,14 @@
 <div class="branding-new">
   <div class="title">Service <br>Application</div>
   <div class="ft_wrap">
-    <div class="mainmap">
-      <a href="plant.php">Plant Map</a>
-    </div>
+    <a href="plant.php">
+      <div class="mainmap">Plant Map</div>
+    </a>
     <div class="searchengine">
       <gcse:searchbox-only resultsUrl="searchpage.html" newWindow="true" queryParameterName="q"></gcse:searchbox-only>
     </div>    
   </div>
 </div>
-
-
 
 <!--div class="branding">
 	<img id="cover" class="hidden-xs" src="images/banners/home-hero-cover.png" alt="">
