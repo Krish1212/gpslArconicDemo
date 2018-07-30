@@ -12,7 +12,7 @@
     ?>
     <div class="machinery container">
         <div class="item machine">
-            <a href="drawings_1.html">
+            <a href="drawings_1.php">
                 <p>Wiring Diagram</p>
                 <img src="./images/wiring_diagram.png" alt="Thumbnail 1" width="100" height="100">
             </a>
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="item machine">
-            <a href="drawings_2.html">
+            <a href="drawings_2.php">
                 <p>Hydraulic Drawing</p>
                 <img src="./images/hydraulic_drawing.png" alt="Thumbnail 2" width="100" height="100">
             </a>
@@ -43,7 +43,7 @@
         </div>
         <div class="item machine">
             <h3>Subsystems</h3>
-            <a href="drawings_3.html">
+            <a href="drawings_3.php">
                 <p>Vane pump</p>
                 <img src="./images/vane_pump.png" alt="Thumbnail 3" width="100" height="100">
             </a>
