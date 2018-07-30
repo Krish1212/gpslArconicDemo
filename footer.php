@@ -1,5 +1,6 @@
+<script src="js/jquery.min.js"></script>
 <script src="js/bundle.js"></script>
-<?php if($from == "home"){?>
+<?php if(isset($from) && $from == "home"){?>
     <script>
         (function() {
             var cx = '008683130934383105744:-8atcd4pn0k';

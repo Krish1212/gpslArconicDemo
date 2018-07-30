@@ -4,7 +4,6 @@
 ?>
 <body>
     <?php 
-        $cart_container = 0;
         include_once('navbar.php');
     ?>
     <div class="plant container">
