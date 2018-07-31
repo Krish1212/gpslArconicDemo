@@ -100,7 +100,10 @@ $(document).ready(function(){
     });
     
     $('body').on('mousedown', '#canvas .cancel', function(ev){
-        $(this).parents('.wrapper').remove();
+        var wrap = $(this).parents('.wrapper')
+        wrap.fadeOut("slow", function(){
+            wrap.remove();
+        });
     });
 
     function cleanup(s){
@@ -109,18 +112,43 @@ $(document).ready(function(){
 
     $('body').on('mousedown', '#canvas .save', function(ev){
         console.log('save comments');
-        var val = $('#canvas .add-comment-wrap textarea').val();
-        val = cleanup(val);
+
         if(whereami == null){
             console.log("ERROR: Feed in the whereami variable");
             return;
-        } 
+        }
+
+        // get hold of the comment popup
+        var wrap = $('#canvas .add-comment-wrap');
+        var textarea = wrap.find('textarea');
+        var val = textarea.val();
+        val = cleanup(val);
+
         if(val && val.length > 0 && coordinates && coordinates.length == 4){
-            jComments.putComments({
+            // save comments
+            var res = jComments.putComments({
                 page : whereami,
                 data : val,
                 coor : coordinates
             });
+            
+            if(res == undefined || res == false){
+                res = {success:false, msg:'Problem saving data, pls contact administrator'};
+            }
+
+            wrap.find('.news').text(
+                res.success ? "Comments Saved..." : res.msg
+            );
+            if(res.success){
+                textarea.val('');
+                setTimeout(function(){
+                    wrap.fadeOut("slow", function(){
+                        wrap.remove();
+                    });
+                }, 2000);
+            }else{
+                wrap.find('.save').prop('disabled', false);
+            }
         }
     });
 

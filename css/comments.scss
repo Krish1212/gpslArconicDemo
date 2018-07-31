@@ -2,7 +2,7 @@
         &.add-comment-wrap{
             position: absolute;
             padding:9px;
-            width:auto;
+            width:250px;
             height:auto;
             border:1px solid grey;
             background: #ccc;
@@ -13,6 +13,7 @@
             }
             textarea{
                 display: block;
+                width:230px;
             }
             button{
                 margin-top: 6px;
@@ -24,6 +25,13 @@
             button.save{
                 margin-left:6px;                
             }
+            .news{
+                margin: 5px 0 0;
+                font-size: 12px;
+                color: #ab0000;
+            }
+        }
+        &.show-comments-wrap{
             
         }
     }

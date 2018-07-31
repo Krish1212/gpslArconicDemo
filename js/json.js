@@ -34,6 +34,7 @@ jComments.getPrevComments = function(data){
 jComments.putComments = function(data){
     console.log('jsComments save comments...');
     if(data == null) return;
+    var response = false;
     $.ajax({
         url:"comments.php",
         type:"POST",
@@ -45,12 +46,13 @@ jComments.putComments = function(data){
         success: function(res){
             console.log("response from comments.php");
             console.log(res);
+            response = res;
         },
         error: function(err){
-            alert(err);
-            console.error(err);
+            console.log(err);
+            response = {success:false, msg: err};
         }
     });
-
+    return response;
 };
 
