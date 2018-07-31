@@ -29,8 +29,7 @@
     <div class="scroll-top"></div>
 
     <?php include("popups.html");?>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bundle.js"></script>
-
+    <?php include_once('footer.php');?>
+    
 </body>
 </html>
