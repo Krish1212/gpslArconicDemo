@@ -70,8 +70,10 @@ $(document).ready(function(){
     $('.cart').bind('click', function(){
         //alert(JSON.stringify(itemObjArray));
         if(itemObjArray.length >= 1)
-            window.location = 'viewcart.html?cartItems='+JSON.stringify(itemObjArray);
+            window.location = 'viewcart.php?cartItems='+JSON.stringify(itemObjArray);
         else
             alert('Please select atleast 1 product to view the cart items');
     });
+
+    
 });

@@ -16,19 +16,10 @@
       <div class="mainmap">Plant Map</div>
     </a>
     <div class="searchengine">
-      <gcse:searchbox-only resultsUrl="searchpage.html" newWindow="true" queryParameterName="q"></gcse:searchbox-only>
+      <gcse:searchbox-only resultsUrl="searchpage.php" newWindow="true" queryParameterName="q"></gcse:searchbox-only>
     </div>    
   </div>
 </div>
-
-<!--div class="branding">
-	<img id="cover" class="hidden-xs" src="images/banners/home-hero-cover.png" alt="">
-	<img id="cover-mobile" class="visible-xs" src="images/banners/home-hero-cover-mobile.png" alt="">
-	<div class="logo">
-		<a href="/"><img src="images/logo.svg" width="100%"/></a>
-	</div>
-	<div class="title">Arconic <br>Web <br>Application</div>
-</div-->
 
 <?php
   include_once('footer.php');

@@ -50,12 +50,9 @@ body{
 			padding-right: 14px;
 			transition: all 0.3s;
 			cursor: pointer;
-			a{
-				text-decoration: none;
-				color: white;
-				font-size: calc(12px + 1.25vw);
-				font-weight: 100;
-			}
+			font-size: calc(12px + 1.25vw);
+			font-weight: 100;
+			color: white;
 			&::before{
 				display: inline-block;
 				vertical-align: -14px;

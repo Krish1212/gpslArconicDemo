@@ -28,7 +28,7 @@
 
     <div class="scroll-top"></div>
 
-    <?php include("popups.html");?>
+    <?php include("popups.php");?>
     <?php include_once('footer.php');?>
     
 </body>
