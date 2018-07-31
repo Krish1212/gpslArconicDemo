@@ -3,6 +3,7 @@
   include_once('header.php');
 ?>
 <body>
+    <script>whereami = 'hydraulic';</script>
 
     <?php 
         $navtitle = "2500 Ton Hydraulic Press Hydraulic Drawing";

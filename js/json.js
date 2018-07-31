@@ -1,19 +1,56 @@
 var jComments = {
-    isInit : false
+    idx : 0
 };
 
-jComments.init = function(){
-    if(!this.isInit ){
-        console.log('init');
-        this.isInit = true;
-    }
+
+/**
+ * get previous comments
+ * @param data :{
+ *      'page'
+ * }
+ */
+jComments.getPrevComments = function(data){
+    console.log('jsComments get prev comments');
+    if(data == null) return;
+    $.ajax({
+        url:"comments.php",
+        type:"POST",
+        data:data,
+        beforeSend: function(){
+        },
+        complete: function(){
+        },
+        success: function(res){
+            console.log("response from comments.php");
+            console.log(res);
+        },
+        error: function(err){
+            alert(err);
+            console.error(err);
+        }
+    });    
 };
 
-jComments.get = function(key){
-    console.log('get');
-};
+jComments.putComments = function(data){
+    console.log('jsComments save comments...');
+    if(data == null) return;
+    $.ajax({
+        url:"comments.php",
+        type:"POST",
+        data:data,
+        beforeSend: function(){
+        },
+        complete: function(){
+        },
+        success: function(res){
+            console.log("response from comments.php");
+            console.log(res);
+        },
+        error: function(err){
+            alert(err);
+            console.error(err);
+        }
+    });
 
-jComments.put = function(key, val){
-    console.log('put');
 };
 

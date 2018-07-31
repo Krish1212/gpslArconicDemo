@@ -3,6 +3,7 @@
   include_once('header.php');
 ?>
 <body>
+<script>whereami = 'home';</script>
 
 <div class="header" style="position:absolute;z-index: 99;">
     <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>

@@ -1,10 +1,9 @@
 <?php 
   $pagetitle = "Arconic Service Application | GPSL | Machines";
-  include_once('header.php');
+  include_once('header.php');  
 ?>
-
 <body>
-
+    <script>whereami = 'machinery';</script>
     <?php 
         $navtitle = "2500 Ton Hydraulic Press 2583";
         $from = "machinery";

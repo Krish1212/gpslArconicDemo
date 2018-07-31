@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/bundle.css"/>
 </head>
 <body>
-
+    <script>whereami = 'search-result';</script>
     <div class="header">
         <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
         <div class="title">Search Result</div>

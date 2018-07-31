@@ -20,6 +20,7 @@ $(document).ready(function(){
         top: $('#canvas').offset().top,
         left: $('#canvas').offset().left
     };
+    var coordinates = [];
 
     function setMousePosition(e) {
         var ev = e || window.event; //Moz || IE
@@ -57,6 +58,7 @@ $(document).ready(function(){
             element.style.top = (mouse.y - canvasOffset.top) + 'px';
             canvas.append(element);
             canvasJSElement.style.cursor = "crosshair";
+            coordinates = [];
         }
     });
     
@@ -72,27 +74,54 @@ $(document).ready(function(){
 
             var boxOffset = $(element).offset();
             var boxWidth = $(element).width();
+            var boxHeight = $(element).height();
 
             var pos = boxOffset.left + boxWidth + 6 - canvasOffset.left;
             if( $(canvas).width() - pos < addCommentWidth){ // place on the left
                 pos = boxOffset.left - addCommentWidth - 26 - canvasOffset.left;
             }
+            var top = boxOffset.top - canvasOffset.top;
             $(canvas).find(".comments.add-comment-wrap").css({
-                top : boxOffset.top - canvasOffset.top,
+                top : top,
                 left : pos
             });
+
+            // store coordinates
+            // coordinates = [top, left, width, height]
+            coordinates = [top, pos, boxWidth, boxHeight];
+
             element = null;
             isDragged = false;
         }
     });
 
-    //$('body').on('click', '.comments.add-comment-wrap', function(ev){
     $('body').on('mousedown', '#canvas .add-comment-wrap', function(ev){
         ev.stopPropagation();
     });
     
     $('body').on('mousedown', '#canvas .cancel', function(ev){
         $(this).parents('.wrapper').remove();
+    });
+
+    function cleanup(s){
+        return s.replace(/^\s+|\s+$/g, "");
+    }
+
+    $('body').on('mousedown', '#canvas .save', function(ev){
+        console.log('save comments');
+        var val = $('#canvas .add-comment-wrap textarea').val();
+        val = cleanup(val);
+        if(whereami == null){
+            console.log("ERROR: Feed in the whereami variable");
+            return;
+        } 
+        if(val && val.length > 0 && coordinates && coordinates.length == 4){
+            jComments.putComments({
+                page : whereami,
+                data : val,
+                coor : coordinates
+            });
+        }
     });
 
     $('body').on('keyup', '#canvas textarea', function(ev){

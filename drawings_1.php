@@ -3,6 +3,7 @@
   include_once('header.php');
 ?>
 <body>
+    <script>whereami = 'wiring';</script>
 
     <?php 
         $navtitle = "2500 Ton Hydraulic Press Wiring Diagram";

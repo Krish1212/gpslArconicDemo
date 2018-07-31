@@ -3,6 +3,7 @@
   include_once('header.php');
 ?>
 <body>
+    <script>whereami = 'plant';</script>
     <?php 
         $navtitle = "Plant Map";
         include_once('navbar.php');

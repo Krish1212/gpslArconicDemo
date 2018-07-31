@@ -3,6 +3,7 @@
   include_once('header.php');
 ?>
 <body>
+    <script>whereami = 'purchase';</script>
     <?php 
         $navtitle = "Parts Shop";
         $from = "purchase";
