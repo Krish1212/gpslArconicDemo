@@ -1,0 +1,18 @@
+{
+	"wiring":{
+		"1":{
+			"data":"sample comment text1"
+		},
+		"2":{
+			"data":"sample comment text2"
+		}
+	},
+	"hydraulic":{
+		"1":{
+			"data":"sample comment text1"
+		},
+		"2":{
+			"data":"sample comment text2"
+		}
+	}
+}
