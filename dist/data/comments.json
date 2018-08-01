@@ -1,35 +1,64 @@
 {
-	"wiring":{
-		"url":"wiring.php",
-		"1":{
-			"data":"sample comment text1",
-			"coor":["top","left","width","height"]
-		},
-		"2":{
-			"data":"sample comment text2",
-			"coor":["top","left","width","height"]
-		}
-	},
-	"hydraulic":{
-		"url":"hydraulic.php",
-		"1":{
-			"data":"sample comment text1",
-			"coor":["top","left","width","height"]
-		},
-		"2":{
-			"data":"sample comment text2",
-			"coor":["top","left","width","height"]
-		}
-	},
-	"machinery":{
-		"url":"machinery.php",
-		"1":{
-			"data":"sample comment text1",
-			"coor":["top","left","width","height"]
-		},
-		"2":{
-			"data":"sample comment text2",
-			"coor":["top","left","width","height"]
-		}
-	}
+    "wiring": {
+        "url": "wiring.php",
+        "1": {
+            "data": "sample comment text1",
+            "coor": [
+                "top",
+                "left",
+                "width",
+                "height"
+            ]
+        },
+        "2": {
+            "data": "sample comment text2",
+            "coor": [
+                "top",
+                "left",
+                "width",
+                "height"
+            ]
+        },
+        "3": {
+            "data": "sample test comment",
+            "coor": "[\"10\",\"10\",\"20\",\"20\"]"
+        }
+    },
+    "hydraulic": {
+        "url": "hydraulic.php",
+        "1": {
+            "data": "sample comment text1",
+            "coor": [
+                "top",
+                "left",
+                "width",
+                "height"
+            ]
+        },
+        "2": {
+            "data": "sample comment text2",
+            "coor": [
+                "top",
+                "left",
+                "width",
+                "height"
+            ]
+        },
+        "3": {
+            "data": "sample test comment",
+            "coor": "[\"10\",\"10\",\"20\",\"20\"]"
+        }
+    },
+    "machinery": {
+        "url": "machinery.php",
+        "1": {
+            "data": "sample comment text1"
+        },
+        "2": {
+            "data": "sample comment text2"
+        },
+        "3": {
+            "data": "sample test comment"
+        }
+    }
 }
