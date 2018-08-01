@@ -2,7 +2,9 @@
 $(document).ready(function(){
 
     var addCommentHTML = $('#add-comment-html').html();
+    var showCommentHTML = $('#show-comment-html').html();
     $('#add-comment-html').remove();
+    $('#show-comment-html').remove();
 
     var canvas = $('#canvas');
     var canvasJSElement = document.getElementById("canvas");
@@ -95,12 +97,12 @@ $(document).ready(function(){
         }
     });
 
-    $('body').on('mousedown', '#canvas .add-comment-wrap', function(ev){
+    $('body').on('mousedown', '.stop-propagation', function(ev){
         ev.stopPropagation();
     });
     
-    $('body').on('mousedown', '#canvas .cancel', function(ev){
-        var wrap = $(this).parents('.wrapper')
+    $('body').on('mousedown', '#canvas .cancel, .popup-close', function(ev){
+        var wrap = $(this).parents('.wrapper');
         wrap.fadeOut("slow", function(){
             wrap.remove();
         });
@@ -109,6 +111,25 @@ $(document).ready(function(){
     function cleanup(s){
         return s.replace(/^\s+|\s+$/g, "");
     }
+
+    $('body').on('mousedown', '.drawings .prev-comments', function(ev){
+        console.log('previous comments');
+
+        if(whereami == null){
+            console.log("ERROR: Feed in the whereami variable");
+            return;
+        }
+
+        var wrap = $('#canvas');
+        if( wrap.find('.show-comment-wrap').length > 0 ){
+
+        }else{
+            wrap.append(showCommentHTML);
+            wrap.find('.show-comment-wrap').fadeIn();
+            $(this).prop('disabled', true);
+        }
+
+    });
 
     $('body').on('mousedown', '#canvas .save', function(ev){
         console.log('save comments');

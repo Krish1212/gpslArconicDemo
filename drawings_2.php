@@ -15,7 +15,7 @@
             <div class="btn btn-primary">
                 Highlight and comment
             </div>
-            <div class="btn btn-primary">
+            <div class="btn btn-primary prev-comments">
                 Previous Comments
             </div>
             <div class="btn btn-primary flush-bottom" onclick="history.back()">
