@@ -11,9 +11,9 @@
     ?>
     <div class="machinery container">
         <div class="item machine">
-            <a href="drawings_1.php">
+            <a href="wiring.php">
                 <p>Wiring Diagram</p>
-                <img src="./images/wiring_diagram.png" alt="Thumbnail 1" width="100" height="100">
+                <img src="./images/wiring_diagram.png" alt="Wiring Diagram" width="100" height="100">
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>
@@ -29,9 +29,9 @@
             </div>
         </div>
         <div class="item machine">
-            <a href="drawings_2.php">
+            <a href="hydraulic.php">
                 <p>Hydraulic Drawing</p>
-                <img src="./images/hydraulic_drawing.png" alt="Thumbnail 2" width="100" height="100">
+                <img src="./images/hydraulic_drawing.png" alt="Hydraulic Drawing" width="100" height="100">
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>
@@ -42,9 +42,9 @@
         </div>
         <div class="item machine">
             <h3>Subsystems</h3>
-            <a href="drawings_3.php">
+            <a href="vane_pump.php">
                 <p>Vane pump</p>
-                <img src="./images/vane_pump.png" alt="Thumbnail 3" width="100" height="100">
+                <img src="./images/vane_pump.png" alt="Vane pump" width="100" height="100">
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>
