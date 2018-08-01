@@ -1,5 +1,6 @@
 {
 	"wiring":{
+		"url":"wiring.php",
 		"1":{
 			"data":"sample comment text1",
 			"coor":["top","left","width","height"]
@@ -10,6 +11,18 @@
 		}
 	},
 	"hydraulic":{
+		"url":"hydraulic.php",
+		"1":{
+			"data":"sample comment text1",
+			"coor":["top","left","width","height"]
+		},
+		"2":{
+			"data":"sample comment text2",
+			"coor":["top","left","width","height"]
+		}
+	},
+	"machinery":{
+		"url":"machinery.php",
 		"1":{
 			"data":"sample comment text1",
 			"coor":["top","left","width","height"]
