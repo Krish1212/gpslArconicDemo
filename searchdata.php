@@ -1,30 +1,36 @@
 <?php
-$url = 'data/comments.json';
-$data = file_get_contents($url); // put the contents of the file into a variable
+$filepath = 'data/comments.json';
+$data = file_get_contents($filepath); // put the contents of the file into a variable
 $datacollection = json_decode($data, true); // decode the JSON feed
 $count = count($datacollection);
-echo "<div style='border:5px solid #01B0BA;padding:20px 20px 20px 20px;'>";
+$urlpath = '';
+$displayresult = '';
+$search = $_GET ['search'];
+echo "<div style='border:2px solid #01B0BA;background-color:#ebf3f4;padding:20px 20px 20px 20px;'>";
+$x='';
 foreach($datacollection as $key => $value)
 {
-foreach($value as $keys =>$values){
-$searchdata = ($values['data']);
-echo '<br/>';
-//$button = $_GET ['submit'];
-$search = $_GET ['search']; 
-//$search = 'text1'; 
-
- 
-$searchdata = str_replace("$search","<span style='color:white;font-weight:bold;background-color:#01B0BA;'>$search</span>",$searchdata);
-$display = '';
-if( strpos( $searchdata, $search ) !== false)
-{
-echo "
-<a href='$url'><b><span style='font-family:sans-serif;font-weight:bold;'/>$search</b></a><br>
-<span style='font-family:sans-serif;'/>$searchdata<br>
-<a href='$url'>$url</a><p>
-";
-}
-}
+	$urlpath = ($value['url']);
+		foreach($value as $keys =>$values){
+			if(isset($values['data'])){
+				$searchdata = $values['data'];
+				if( strpos( $searchdata, $search ) !== false){
+				$x++;
+				$searchdata = str_replace("$search","<span style='color:white;font-weight:bold;background-color:#01B0BA;'>$search</span>",$searchdata);
+				$displayresult .= "				
+				<span style='font-family:sans-serif;'/>$searchdata<br>
+				<a href='$urlpath'>$urlpath</a><p>
+				<br/>";
+				}
+			}
+			}				
+		}
+if ($x>0){
+		echo "<span style='font-family:courier;'/>$x results found for the search term <b>$search</b><hr/><br/>";
+        echo "$displayresult";
+		}
+else{
+	    echo "<span style='font-family:courier;'/>No Results Found for the term <b>$search</b>! ";
 }
 echo "</div>";
 ?>
