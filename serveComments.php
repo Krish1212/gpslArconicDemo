@@ -12,9 +12,10 @@ $jsonData = json_decode(file_get_contents($jFile),true);
 $type = isset($_POST['type']) ? $_POST['type'] : '';
 $id =  isset($_POST['id']) ? $_POST['id'] : '';
 if(empty($type)){
-    return '{"success":false,"message":"input data missing"}';
+    echo '{"success":false,"message":"input data missing"}';
 } 
 if($type === 'get') {
+    //echo $type;
     if(!empty($id)){
         getCommentbyId();
     } else {
@@ -23,16 +24,15 @@ if($type === 'get') {
 } else if($type === 'put') {
     putComment();
 } else {
-    return '{"success":false,"message":"input data mismatch"}';
+    echo '{"success":false,"message":"input data mismatch"}';
 }
 function getAllComments() {
     $page = $_POST['page'];
     try{
         $pageData = $GLOBALS['jsonData'][$page];
-        return $pageData;
+        echo json_encode($pageData);
     }catch(Exception $e){
-        echo $e->getMessage();
-        return 'Error: ' . $e->getMessage();
+        echo 'Error: ' . $e->getMessage();
     }
 }
 function getCommentbyId(){
@@ -40,10 +40,9 @@ function getCommentbyId(){
     $id = $_POST['id'];
     try{
         $comment[$id] = $GLOBALS['jsonData'][$page][$id];
-        return $comment;
+        echo json_encode($comment);
     }catch(Exception $e){
-        echo $e->getMessage();
-        return 'Error: ' . $e->getMessage();
+        echo 'Error: ' . $e->getMessage();
     }
 }
 function putComment(){
@@ -51,7 +50,7 @@ function putComment(){
     $data = isset($_POST['data']) ? $_POST['data'] : '';
     $coor = isset($_POST['coor']) ? $_POST['coor'] : '';
     if(empty($page) || empty($data) || (($page == 'wiring' || $page == 'hydraulic') && empty($coor))){
-        return '{"success":false,"message":"input data missing"}';
+        echo '{"success":false,"message":"input data missing"}';
     }
     $jsonObj;
     switch($page){
@@ -76,13 +75,13 @@ function putComment(){
         $pageData = json_encode($pageData, JSON_PRETTY_PRINT);
         try{
             if(file_put_contents($GLOBALS['jFile'],$pageData)){
-                return '{"success":true,"message":"data added"}';
+                echo '{"success":true,"message":"data added"}';
             }
         } catch(Exception $e) {
-            return '{"success":false,"message":"' . $e->getMessage() . '"}';
+            echo '{"success":false,"message":"' . $e->getMessage() . '"}';
         }
     }catch(Exception $e){
-        return '{"success":false,"message":"' . $e->getMessage() . '"}';
+        echo '{"success":false,"message":"' . $e->getMessage() . '"}';
     }
 }
 //getCommentbyId();
