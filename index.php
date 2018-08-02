@@ -3,7 +3,15 @@
   include_once('header.php');
 ?>
 <body>
-<script>whereami = 'home';</script>
+<script>whereami = 'home';
+function validateForm() {
+    var x = document.forms["sform"]["search"].value;
+    if (x == "") {
+        alert("Search term must be filled out");
+        return false;
+    }
+}
+</script>
 
 <div class="header" style="position:absolute;z-index: 99;">
     <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
@@ -18,7 +26,7 @@
     </a>
     <div class="searchengine">
       <!--gcse:searchbox-only resultsUrl="searchpage.php" newWindow="true" queryParameterName="q"></gcse:searchbox-only-->
-      <form action='searchdata.php' method='GET'>
+      <form name="sform" action='searchdata.php' method='GET' onsubmit="return validateForm()">
       <input type='text' size='90' name='search' style="width:180px;height:30px;border:3px solid #01B0BA;">
       <input type='submit' name='submit' style="position:absolute;width:50px;height:30px;background-color:#01B0BA;color:white;border:3px solid #01B0BA;font-weight:bold;margin-left:-5px;font-size:80%;" value='Search' >
       </form>
