@@ -17,14 +17,7 @@
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>
-                <div class="comments-list">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
+                <div class="wiring comments-list">
                 </div>
             </div>
         </div>
@@ -35,8 +28,7 @@
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>
-                <div class="comments-list">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
+                <div class="hydraulic comments-list">
                 </div>
             </div>
         </div>
@@ -57,13 +49,14 @@
             <h3>Feedback/Comment</h3>
             <textarea name="feedback" id="feedback" rows="10"></textarea><br>
             <div class="button-bar">
-                <input type="button" value="Previous Comments" class="button">
-                <input type="button" value="Submit" class="button">
+                <input type="button" value="Previous Comments" class="previous button">
+                <input type="button" value="Submit" class="submit button">
             </div>
         </div>
     </div>
-<?php
-  include_once('footer.php');
+<?php 
+    include('popups.php');
+    include_once('footer.php');
 ?>
 <script>
     $(document).ready(onMachinerypageload);
