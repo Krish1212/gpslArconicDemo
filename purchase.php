@@ -149,5 +149,8 @@
         </div>
     </div>
     <?php include_once('footer.php');?>
+    <script>
+        $(document).ready(onPartspageload);
+    </script>
 </body>
 </html>

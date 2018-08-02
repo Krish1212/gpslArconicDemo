@@ -1,5 +1,8 @@
 console.log("Service application");
-$(document).ready(function(){
+
+//This should happen only on the part shop page (purchase.php)
+function onPartspageload(){
+    console.log('Inside Purchase page');
     var itemCnt=0;
     var itemObjArray = [];
     $('.product-info').bind('click', function(){
@@ -74,6 +77,13 @@ $(document).ready(function(){
         else
             alert('Please select atleast 1 product to view the cart items');
     });
+}
 
-    
+//This should happen only on the machinery page (machinery.php)
+function onMachinerypageload(){
+    console.log("Inside machinery page");
+}
+
+$(document).ready(function(){
+
 });

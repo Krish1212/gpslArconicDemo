@@ -9,6 +9,22 @@ class MComment {
 }
 $jFile = "data/comments.json";
 $jsonData = json_decode(file_get_contents($jFile),true);
+$type = isset($_POST['type']) ? $_POST['type'] : '';
+$id =  isset($_POST['id']) ? $_POST['id'] : '';
+if(empty($type)){
+    return '{"success":false,"message":"input data missing"}';
+} 
+if($type === 'get') {
+    if(!empty($id)){
+        getCommentbyId();
+    } else {
+        getAllComments();
+    }
+} else if($type === 'put') {
+    putComment();
+} else {
+    return '{"success":false,"message":"input data mismatch"}';
+}
 function getAllComments() {
     $page = $_POST['page'];
     try{
