@@ -2,26 +2,49 @@
     "wiring": {
         "url": "wiring.php",
         "1": {
-            "data": "sample comment text1",
+            "data": "The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed. Thus, hydraulic forces which would impose side loads on the shaft are cancelled. Hydraulic forces which would impose side loads on the shaft are cancelled. The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed.",
             "coor": [
-                "top",
-                "left",
-                "width",
-                "height"
+                "0",
+                "0",
+                "100",
+                "80"
             ]
         },
         "2": {
-            "data": "sample comment text2",
+            "data": "The pressure plate seals the pumping chamber as shown in Figure 3. A light spring holds the plate against the cartridge until pressure builds up in the system. System pressure is effective against the area at the back of the plate, which is larger than the area exposed to the pumping cartridge. Thus, an unbalanced force holds the plate against the cartridge, sealing the cartridge and providing the proper running clearance for the rotor and vanes.",
             "coor": [
-                "top",
-                "left",
-                "width",
-                "height"
+                "100",
+                "80",
+                "100",
+                "80"
             ]
         },
         "3": {
-            "data": "sample test comment",
-            "coor": "[\"10\",\"10\",\"20\",\"20\"]"
+            "data": "A light spring holds the plate against the cartridge until pressure builds up in the system. System pressure is effective against the area at the back of the plate, which is larger than the area exposed to the pumping cartridge. Thus, an unbalanced force holds the plate against the cartridge, sealing the cartridge and providing the proper running clearance for the rotor and vanes.",
+            "coor": [
+                "10",
+                "10",
+                "20",
+                "20"
+            ]
+        },
+        "4": {
+            "data": "Hydraulic forces which would impose side loads on the shaft are cancelled. The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed. The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed.",
+            "coor": [
+                "53",
+                "365.203125",
+                "285",
+                "240"
+            ]
+        },
+        "5": {
+            "data": "asdf",
+            "coor": [
+                "78",
+                "429.203125",
+                "303",
+                "157"
+            ]
         }
     },
     "hydraulic": {
@@ -47,6 +70,33 @@
         "3": {
             "data": "sample test comment",
             "coor": "[\"10\",\"10\",\"20\",\"20\"]"
+        },
+        "4": {
+            "data": "dddddd",
+            "coor": [
+                "73",
+                "415.203125",
+                "319",
+                "236"
+            ]
+        },
+        "5": {
+            "data": "2323232323",
+            "coor": [
+                "64",
+                "374.203125",
+                "312",
+                "59"
+            ]
+        },
+        "6": {
+            "data": "dddd",
+            "coor": [
+                "80",
+                "478.203125",
+                "108",
+                "175"
+            ]
         }
     },
     "machinery": {

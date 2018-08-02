@@ -14,6 +14,7 @@
             textarea{
                 display: block;
                 width:230px;
+                resize: none;
             }
             button{
                 margin-top: 6px;
@@ -22,7 +23,7 @@
                 float: right;
                 display: block;
             }
-            button.save{
+            button.save-comment{
                 margin-left:6px;                
             }
             .news{
@@ -47,12 +48,17 @@
                 font-size: 20px;
                 font-weight: 400;
             }
-            .comment-list-item:nth-child(1){
-                margin-top:12px;
+            .comment-list{
+                padding-top:12px;
+                overflow-y: scroll;
+                padding-right: 17px;
+                box-sizing: content-box;
+                max-height: 370px;
             }
             .comment-list-item{
                 margin-bottom: 12px;
                 border: 1px solid grey;
+                resize: none;
                 background: white;
                 padding: 8px;
                 color: #444;

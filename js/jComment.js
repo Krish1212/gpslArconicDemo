@@ -1,19 +1,44 @@
 var jComments = {
-    idx : 0
+    url : 'serveComments.php'
 };
 
 
-/**
- * get previous comments
- * @param data :{
- *      'page'
- * }
- */
 jComments.getPrevComments = function(data){
     console.log('jsComments get prev comments');
-    if(data == null) return;
+    var _this = this;
+    data = data || {};
+    data.type = 'get';
+    data.page = whereami;
+    var response = null;
     $.ajax({
-        url:"comments.php",
+        url: _this.url,
+        type:"POST",
+        data:data,
+        beforeSend: function(){
+        },
+        complete: function(){
+        },
+        success: function(res){
+            console.log("response from comments.php");
+            console.log(res);
+            response = res;
+        },
+        error: function(err){
+            alert(err);
+            console.error(err);
+        }
+    });
+    return response;
+};
+
+jComments.getCommentbyID = function(data){
+    console.log('jsComments get prev comments');
+    if(data == null) return;
+    var _this = this;
+    data.type = 'get';
+    data.page = whereami;
+    $.ajax({
+        url: _this.url,
         type:"POST",
         data:data,
         beforeSend: function(){
@@ -34,9 +59,12 @@ jComments.getPrevComments = function(data){
 jComments.putComments = function(data){
     console.log('jsComments save comments...');
     if(data == null) return;
+    data.type = 'put';
+    data.page = whereami;
+    var _this = this;
     var response = false;
     $.ajax({
-        url:"comments.php",
+        url: _this.url,
         type:"POST",
         data:data,
         beforeSend: function(){
