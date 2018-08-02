@@ -101,7 +101,7 @@ $(document).ready(function(){
         ev.stopPropagation();
     });
     
-    $('body').on('mousedown', '#canvas .cancel, .popup-close', function(ev){
+    $('body').on('mousedown', '#canvas .cancel, .popup-close, #canvas .show-more', function(ev){
         var wrap = $(this).parents('.wrapper');
         wrap.fadeOut("slow", function(){
             wrap.remove();
@@ -124,14 +124,44 @@ $(document).ready(function(){
         if( wrap.find('.show-comment-wrap').length > 0 ){
 
         }else{
-            wrap.append(showCommentHTML);
-            wrap.find('.show-comment-wrap').fadeIn();
-            $(this).prop('disabled', true);
-        }
+            var data = {
+              page : whereami,
+              type : 'get'  
+            };
+            $.ajax({
+                url: "serveComments.php",
+                type:"POST",
+                data:data,
+                success: function(res){
+                    console.log("response from comments.php");
+                    console.log(res);
+                    if(res == null) return;
 
+                    // hide all highlights
+                    $('#canvas .rect, #canvas .comments').fadeOut();
+
+                    wrap.append(showCommentHTML);
+                    var listWrap = wrap.find('.comment-list');
+                    var template = listWrap.html();
+                    var _html = "";
+                    $.each(res, function(idx, item){
+                        if(idx != "url"){
+                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx);
+                        }
+                    });
+                    listWrap.html(_html);
+                    wrap.find('.show-comment-wrap').fadeIn();
+                    $(this).prop('disabled', true);
+                },
+                error: function(err){
+                    alert(err);
+                    console.error(err);
+                }
+            });
+        }
     });
 
-    $('body').on('mousedown', '#canvas .save', function(ev){
+    $('body').on('mousedown', '#canvas .save-comment', function(ev){
         console.log('save comments');
 
         if(whereami == null){
@@ -147,34 +177,48 @@ $(document).ready(function(){
 
         if(val && val.length > 0 && coordinates && coordinates.length == 4){
             // save comments
-            var res = jComments.putComments({
+            var data = {
+                type : 'put',
                 page : whereami,
                 data : val,
                 coor : coordinates
+            };
+            var _this = this;
+            var response = false;
+            $.ajax({
+                url: "serveComments.php",
+                type:"POST",
+                data:data,
+                success: function(res){
+                    console.log("response from comments.php");
+                    console.log(res);
+                    if(res == undefined || res == "" || res.success == false){
+                        return;
+                    }
+                    wrap.find('.news').text(
+                        res.success ? "Comments Saved..." : res.msg
+                    );
+                    if(res.success){
+                        textarea.val('');
+                        setTimeout(function(){
+                            wrap.fadeOut("slow", function(){
+                                wrap.remove();
+                            });
+                        }, 1400);
+                    }else{
+                        wrap.find('.save-comment').prop('disabled', false);
+                    }
+                },
+                error: function(err){
+                    console.log(err);
+                    response = {success:false, msg: err};
+                }
             });
-            
-            if(res == undefined || res == false){
-                res = {success:false, msg:'Problem saving data, pls contact administrator'};
-            }
-
-            wrap.find('.news').text(
-                res.success ? "Comments Saved..." : res.msg
-            );
-            if(res.success){
-                textarea.val('');
-                setTimeout(function(){
-                    wrap.fadeOut("slow", function(){
-                        wrap.remove();
-                    });
-                }, 2000);
-            }else{
-                wrap.find('.save').prop('disabled', false);
-            }
         }
     });
 
     $('body').on('keyup', '#canvas textarea', function(ev){
-        var savebtn = $('#canvas .save');
+        var savebtn = $('#canvas .save-comment');
         if( $(this).val().length > 0 ){
             savebtn.prop('disabled', false);
         }else{
