@@ -72,8 +72,11 @@ function onPartspageload(){
     }
     $('.cart').bind('click', function(){
         //alert(JSON.stringify(itemObjArray));
-        if(itemObjArray.length >= 1)
-            window.location = 'viewcart.php?cartItems='+JSON.stringify(itemObjArray);
+        if(itemObjArray.length >= 1) {
+            //window.location = 'viewcart.php?cartItems='+ JSON.stringify(itemObjArray);
+            $('<input type="hidden" name="cartItems">').val(JSON.stringify(itemObjArray)).appendTo('#hiddenform');
+            $('#hiddenform').submit();
+        }
         else
             alert('Please select atleast 1 product to view the cart items');
     });
@@ -447,3 +450,27 @@ function dragSupport(){
     });
 }
 
+function onviewcartPageload(){
+    cartTable = $('.cart-table').html();
+    //console.log(cartTable);
+    $('#checkout').bind('click',function(){
+        $.ajax({
+            url:"send_email.php",
+            type:"POST",
+            data:{'message':cartTable},
+            beforeSend: function(){
+                $('#checkout').text('Sending Email...').addClass('process').removeClass('active').attr('disabled','disabled');
+            },
+            complete: function(){
+                $('#checkout').text('Checkout').addClass('active').removeClass('process');
+            },
+            success: function(result){
+                console.log(result);
+                alert('Cart items emailed to: mbakos@gpsl.co');
+            },
+            error: function(error){
+                console.error(error);
+            }
+        });
+    });
+}

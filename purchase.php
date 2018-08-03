@@ -148,6 +148,7 @@
             </div>
         </div>
     </div>
+    <form id="hiddenform" method="POST" action="viewcart.php" hidden></form>
     <?php include_once('footer.php');?>
     <script>
         $(document).ready(onPartspageload);
