@@ -83,6 +83,10 @@ function onPartspageload(){
 function onMachinerypageload(){
     console.log("Inside machinery page");
     $(document).ready(function(){
+
+        var showCommentHTML = $('#show-comment-html').html();
+        $('#show-comment-html').remove();
+
         $.ajax({
             url:"serveComments.php",
             type:"POST",
@@ -149,6 +153,53 @@ function onMachinerypageload(){
                 }
             });
         });
+
+        $('.previous.button').bind('click', function(){
+            console.log('previous comments');
+    
+            var data = {
+                page : whereami,
+                type : 'get'  
+            };
+            $.ajax({
+                url: "serveComments.php",
+                type:"POST",
+                data:data,
+                success: function(res){
+                    console.log("response from comments.php");
+                    console.log(res);
+                    if(res == null) return;
+
+                    var wrap = $('body');
+                    wrap.append('<div class="js-wrapper">'+ showCommentHTML + '</div>');
+                    var listWrap = wrap.find('.comment-list');
+                    var template = listWrap.html();
+                    var _html = "";
+                    $.each(res, function(idx, item){
+                        if(idx != "url"){
+                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx);
+                        }
+                    });
+                    listWrap.html(_html);
+                    var tempWrap = wrap.find('.show-comment-wrap');
+                    tempWrap.addClass('js-show-comments');
+                    tempWrap.fadeIn();
+                    $(this).prop('disabled', true);
+                },
+                error: function(err){
+                    alert(err);
+                    console.error(err);
+                }
+            });
+        });
+
+        $('body').on('click', '.popup-close, .show-more', function(ev){
+            var wrap = $(this).parents('.js-wrapper');
+            wrap.fadeOut("slow", function(){
+                wrap.remove();
+            });
+        });
+
     });
 }
 
@@ -396,6 +447,3 @@ function dragSupport(){
     });
 }
 
-$(document).ready(function(){
-
-});

@@ -15,7 +15,7 @@
             <div class="comment-list">
                 <textarea class="comment-list-item" data-idx="#idx" spellcheck="false">#data</textarea>
             </div>
-            <button class="btn btn-primary show-more" disabled>Close</button>
+            <button class="btn btn-primary show-more">Close</button>
         </div>
     </div>
 
