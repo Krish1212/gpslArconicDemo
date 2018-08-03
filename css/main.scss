@@ -14,6 +14,10 @@ body{
 	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
 }
 
+h2{
+	font-weight: 100;
+}
+
 .branding-new{
 	background: #008188 url(../images/banners/home-hero-cover.png) no-repeat;
     height: 100vh;

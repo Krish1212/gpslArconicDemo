@@ -1,3 +1,17 @@
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Machines";
+  include_once('header.php');  
+?>
+<body>
+    <script>whereami = 'searchdata';</script>
+    <?php 
+        $navtitle = "Service Application Manager";
+        include_once('navbar.php');
+	?>
+
+<div style="width:80%;margin:0 auto;margin-top:12px;">
+<h2>Search Result:</h2>
+
 <?php
 $filepath = 'data/comments.json';
 $data = file_get_contents($filepath); 
@@ -55,3 +69,7 @@ else{
 }
 echo "</div>";
 ?>
+
+</div>
+</body>
+</html>
