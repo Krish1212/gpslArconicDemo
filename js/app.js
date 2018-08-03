@@ -466,7 +466,11 @@ function onviewcartPageload(){
             },
             success: function(result){
                 console.log(result);
-                alert('Cart items emailed to: mbakos@gpsl.co');
+                if(result.success){
+                    alert('Cart items emailed to: mbakos@gpsl.co');
+                } else {
+                    alert(result.message);
+                }
             },
             error: function(error){
                 console.error(error);
