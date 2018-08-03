@@ -38,12 +38,12 @@
                 <p>Vane pump</p>
                 <img src="./images/vane_pump.png" alt="Vane pump" width="100" height="100">
             </a>
-            <div class="comments-block">
+<!--             <div class="comments-block">
                 <h3>Comments</h3>
                 <div class="comments-list">
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam natus aut magnam perspiciatis quas a dolorem possimus exercitationem, architecto ea harum veritatis quia deleniti nisi accusamus consequatur, excepturi eligendi illum!</p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="feedback">
             <h3>Feedback/Comment</h3>

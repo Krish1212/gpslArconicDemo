@@ -50,11 +50,12 @@
         max-width:960px;
         padding-right:10px;
         padding-left:10px;
-        clear:left;
+        clear:both;
         a{
             position: relative;
             float:left;
             margin-right:2%;
+            margin-bottom:2%;
             min-height:250px;
             width:30%;
             max-height:40%;
@@ -98,7 +99,7 @@
     }
     .feedback{
         position:relative;
-        clear:left;
+        clear:both;
         margin:3% auto;
         max-width:960px;
         padding-right:10px;
