@@ -1,3 +1,17 @@
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | Plant Map";
+  include_once('header.php');
+?>
+<body>
+    <script>whereami = 'plant';</script>
+    <?php 
+        $navtitle = "Service Application Manager";
+        include_once('navbar.php');
+    ?>
+
+<div style="width:80%;margin:0 auto;margin-top:18px;">
+<h2>Search Result</h>
+
 <?php
 $filepath = 'data/comments.json';
 $data = file_get_contents($filepath); // put the contents of the file into a variable
@@ -34,3 +48,7 @@ else{
 }
 echo "</div>";
 ?>
+
+</div>
+</body>
+</html>

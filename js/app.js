@@ -254,7 +254,14 @@ function dragSupport(){
         ev.stopPropagation();
     });
     
-    $('body').on('mousedown', '#canvas .cancel, .popup-close, #canvas .show-more', function(ev){
+    $('body').on('mousedown', '#canvas .cancel, .popup-close', function(ev){
+        var wrap = $(this).parents('.wrapper');
+        wrap.fadeOut("slow", function(){
+            wrap.remove();
+        });
+    });
+
+    $('body').on('click', '#canvas .show-more', function(ev){
         var wrap = $(this).parents('.wrapper');
         wrap.fadeOut("slow", function(){
             wrap.remove();
@@ -314,7 +321,7 @@ function dragSupport(){
         }
     });
 
-    $('body').on('mousedown', '#canvas .save-comment', function(ev){
+    $('body').on('mousedown', '#canvas .add-comment-wrap .save-comment', function(ev){
         console.log('save comments');
 
         if(whereami == null){
@@ -370,7 +377,7 @@ function dragSupport(){
         }
     });
 
-    $('body').on('keyup', '#canvas textarea', function(ev){
+    $('body').on('keyup', '#canvas .add-comment-wrap textarea', function(ev){
         var savebtn = $('#canvas .save-comment');
         if( $(this).val().length > 0 ){
             savebtn.prop('disabled', false);
@@ -383,7 +390,7 @@ function dragSupport(){
         alert('todo');
     });
     
-    $('.highlight').click(function(ev){
+    $('.drawings .highlight').click(function(ev){
         document.body.style.cursor = "crosshair";
         $('#canvas').css({border:'3px dotted red'});
     });

@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
+    <div class="logo"><a href="/"><img src="images/logo.svg" alt=""></a></div>
     <div class="title"><?= isset($navtitle) ? $navtitle : ""?></div>
     <?php if(isset($from) && $from == "purchase") {?>
         <div class="cart-container">

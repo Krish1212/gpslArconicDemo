@@ -8,7 +8,7 @@
 <body>
     <script>whereami = 'viewcart';</script>
     <div class="header">
-        <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
+        <div class="logo"><a href="/"><img src="images/logo.svg" alt=""></a></div>
         <div class="title">View Cart &amp; Checkout</div>
     </div>
     <div class="viewcart container">

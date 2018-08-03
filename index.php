@@ -14,7 +14,7 @@ function validateForm() {
 </script>
 
 <div class="header" style="position:absolute;z-index: 99;">
-    <div class="logo"><a href="/demo/arconic/"><img src="images/logo.svg" alt=""></a></div>
+    <div class="logo"><a href="/"><img src="images/logo.svg" alt=""></a></div>
     <div class="title"></div>
 </div>
 
