@@ -10,7 +10,9 @@
 	?>
 
 <div style="width:80%;margin:0 auto;margin-top:12px;">
-<h2>Search Result:</h2>
+
+<?php $search = $_GET ['search']; ?>
+<h2>Search Result for <b><?php echo $search?></b>:</h2>
 
 <?php
 $filepath = 'data/comments.json';
@@ -23,7 +25,6 @@ $displayresult = '';
 include ( 'PdfToText-master/PdfToText.phpclass' ) ;
 $pdfpath = 'downloads/pll_2373.pdf';
 $pdf	=  new PdfToText ( $pdfpath ) ;	
-$search = $_GET ['search'];
 //$searchuc = ucwords($search);
 //$searchlc = lcfirst($search);
 $pdfdata = $pdf -> Text ;
@@ -61,11 +62,10 @@ foreach($datacollection as $key => $value)
 			}				
 		}
 if ($x>0){
-		echo "<span style='font-family:courier;'/>$x results found for the search term <b>$search</b><hr/><br/>";
         echo "$displayresult";
 		}
 else{
-	    echo "<span style='font-family:courier;'/>No Results Found for the term <b>$search</b>! ";
+	    echo "No Results Found for the term <b>$search</b>! ";
 }
 echo "</div>";
 ?>
