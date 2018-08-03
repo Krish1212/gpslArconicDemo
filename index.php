@@ -27,8 +27,10 @@ function validateForm() {
     <div class="searchengine">
       <!--gcse:searchbox-only resultsUrl="searchpage.php" newWindow="true" queryParameterName="q"></gcse:searchbox-only-->
       <form name="sform" action='searchdata.php' method='GET' onsubmit="return validateForm()">
-      <input type='text' size='90' name='search' style="width:180px;height:30px;border:3px solid #01B0BA;">
-      <input type='submit' name='submit' style="position:absolute;width:50px;height:30px;background-color:#01B0BA;color:white;border:3px solid #01B0BA;font-weight:bold;margin-left:-5px;font-size:80%;" value='Search' >
+        <input type='text' size='90' name='search' placeholder="Search in Application...">
+        <div class="searchbtn">
+          <input type='submit' name='submit' value='Search'>
+        </div>
       </form>
 	</div>    
   </div>
