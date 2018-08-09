@@ -1,0 +1,13 @@
+.breadscrumb{
+    display:block;
+    margin: 3px 0 0 calc(20% + 12px);
+    a{
+        font-size:13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .breadscrumb{
+        margin-left: 8px;
+    }
+}

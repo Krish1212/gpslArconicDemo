@@ -9,7 +9,7 @@
         $from = "purchase";
         include_once('navbar.php');
     ?>
-
+    <?php include_once('breadscrumb.php'); ?>
     <div class="products container">
         <div class="product">
             <div class="product-info" prod-id="1">
@@ -153,5 +153,10 @@
     <script>
         $(document).ready(onPartspageload);
     </script>
+    <style>
+        .breadscrumb{
+            margin-left:24px;
+        }
+    </style>
 </body>
 </html>

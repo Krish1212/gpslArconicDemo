@@ -9,6 +9,7 @@
         $from = "machinery";
         include_once('navbar.php');
     ?>
+    <?php include_once('breadscrumb.php'); ?>
     <div class="machinery container">
         <div class="item machine">
             <a href="wiring.php">

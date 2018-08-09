@@ -11,6 +11,8 @@
         include_once('navbar.php');
     ?>
 
+    <?php include_once('breadscrumb.php'); ?>
+
     <div class="drawings">
         <div class="leftbar">
             <div class="btn btn-primary highlight">

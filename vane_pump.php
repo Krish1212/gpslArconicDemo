@@ -11,6 +11,8 @@
         include_once('navbar.php');
     ?>
 
+    <?php include_once('breadscrumb.php'); ?>
+
     <object data="downloads/pll_2373.pdf" type="application/pdf" class="pdf-viewer" width="100%" height="100%" style="min-height: 800px">
         <p>Your browser doesn't support PDF viewer, so use this link to download.<br>
         <a href="downloads/pll_2373.pdf">Click here to download the PDF!</a></p>
