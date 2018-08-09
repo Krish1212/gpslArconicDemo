@@ -1,22 +1,19 @@
-<?php
+<?php 
+  $pagetitle = "Arconic Service Application | GPSL | View Cart";
+  include_once('header.php');
   session_start();
   if(!$_SESSION['uname']){
       header('Location: index.php');
-  }
+  } 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Arconic Service Application | GPSL</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bundle.css"/>
-</head>
 <body>
     <script>whereami = 'viewcart';</script>
-    <div class="header">
-        <div class="logo"><a href="/"><img src="images/logo.svg" alt=""></a></div>
-        <div class="title">View Cart &amp; Checkout</div>
-    </div>
+    <?php 
+        $navtitle = "View Cart & Checkout";
+        $from = "viewcart";
+        include_once('navbar.php');
+        include_once('breadscrumb.php');
+    ?>
     <div class="viewcart container">
         <?php $cartItems = json_decode($_POST['cartItems']);
             //echo $cartItems;
