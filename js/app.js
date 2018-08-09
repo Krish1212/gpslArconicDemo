@@ -213,6 +213,11 @@ function dragSupport(){
     $('#add-comment-html').remove();
     $('#show-comment-html').remove();
 
+    $(".scroll-top").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
     var canvas = $('#canvas');
     var canvasJSElement = document.getElementById("canvas");
     var mouse = {
