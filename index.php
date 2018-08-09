@@ -10,10 +10,16 @@
     header('Location: ' . $_SERVER['PHP_SELF']);
   }
   if(isset($_POST['uname'])){
-    if($userdetails[$_POST['uname']] == $_POST['upass']){
+    if($_POST['uname'] == ''){
+      $errormsg = 'Username cannot be empty';
+    } else if($_POST['upass'] == ''){
+      $errormsg = 'Password cannot be empty';
+    } else if($userdetails[$_POST['uname']] == $_POST['upass']){
       $_SESSION['uname'] = $_POST['uname'];
+      $errormsg = '';
     } else {
       //echo the error message here
+      $errormsg = 'Wrong user credentials! Try again.';
     }
   }
 ?>
@@ -42,6 +48,9 @@ function validateForm() {
     <div class="login">
       <form action="" method="post" name="login_form">
         <h3>Login</h3>
+        <?php if(isset($errormsg) && !($errormsg == '')) {?>
+          <p class="error-msg" style="text-align:center;background:rgba(255,0,0,0.3);border:1px solid red;"><?= $errormsg ?></p>
+        <?php } ?>
         <input type="text" name="uname" placeholder="Username"/><br>
         <input type="password" name="upass" placeholder="Password"/><br>
         <input type="submit" name="submit" value="SUBMIT"/>
