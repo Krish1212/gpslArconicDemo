@@ -6,6 +6,7 @@
     <script>whereami = 'plant';</script>
     <?php 
         $navtitle = "Plant Map";
+        $from = "plant";
         include_once('navbar.php');
     ?>
     <div class="plant container">

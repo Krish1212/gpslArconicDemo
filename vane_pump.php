@@ -7,6 +7,7 @@
 
     <?php 
         $navtitle = "2500 Ton Hydraulic Press – Vane Pump Manual";
+        $from = 'pdf-viewer';
         include_once('navbar.php');
     ?>
 

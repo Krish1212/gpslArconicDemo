@@ -7,6 +7,7 @@
 
     <?php 
         $navtitle = "2500 Ton Hydraulic Press Hydraulic Drawing";
+        $from = 'hydraulic';
         include_once('navbar.php');
     ?>
 

@@ -10,7 +10,7 @@
         </div>
     <?php } ?>
 </div>
-<?php if(isset($from) && $from == "machinery") {?>
+<?php if(isset($from) && ($from == "machinery" || $from == "plant" || $from == 'wiring' || $from == 'hydraulic' || $from == 'pdf-viewer')) {?>
 <div class="cart-container">
     <div class="cart">
         <a href="purchase.php">Parts Shop </a>

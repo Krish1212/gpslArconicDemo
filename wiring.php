@@ -7,6 +7,7 @@
 
     <?php 
         $navtitle = "2500 Ton Hydraulic Press Wiring Diagram";
+        $from = 'wiring';
         include_once('navbar.php');
     ?>
 
