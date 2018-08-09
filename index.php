@@ -51,8 +51,8 @@ function validateForm() {
         <?php if(isset($errormsg) && !($errormsg == '')) {?>
           <p class="error-msg" style="text-align:center;background:rgba(255,0,0,0.3);border:1px solid red;"><?= $errormsg ?></p>
         <?php } ?>
-        <input type="text" name="uname" placeholder="Username"/><br>
-        <input type="password" name="upass" placeholder="Password"/><br>
+        <input type="text" name="uname" placeholder="Username" required/><br>
+        <input type="password" name="upass" placeholder="Password" required/><br>
         <input type="submit" name="submit" value="SUBMIT"/>
       </form>
     </div>
