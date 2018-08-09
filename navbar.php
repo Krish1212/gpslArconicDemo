@@ -10,7 +10,17 @@
         </div>
     <?php } ?>
 </div>
-<?php if(isset($from) && ($from == "machinery" || $from == "plant" || $from == 'wiring' || $from == 'hydraulic' || $from == 'pdf-viewer')) {?>
+<?php if(isset($from) && ($from == "machinery" || $from == "plant" || $from == 'wiring' || $from == 'hydraulic' || $from == 'pdf-viewer' || $from == 'search')) {?>
+<div class="search-container">
+	<div class="searchbox">
+		<form name="sform" action='searchdata.php' method='GET' onsubmit="return validateForm()">
+			<input type='text' size='50' name='search' placeholder="Search in Application...">
+				<div class="searchbtn2">
+				<input type='submit' name='submit' value=''>
+				</div>
+		</form>
+	  </div>
+</div>
 <div class="cart-container">
     <div class="cart">
         <a href="purchase.php">Parts Shop </a>
@@ -18,4 +28,5 @@
     </div>
     <span class="item-count"></span>
 </div>
+
 <?php } ?>
