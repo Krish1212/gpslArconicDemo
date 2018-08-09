@@ -16,7 +16,7 @@
 		<form name="sform" action='searchdata.php' method='GET' onsubmit="return validateForm()">
 			<input type='text' size='50' name='search' placeholder="Search in Application...">
 				<div class="searchbtn2">
-				<input type='submit' name='submit' value='xxx'>
+				<input type='submit' name='submit' value=''>
 				</div>
 		</form>
 	  </div>

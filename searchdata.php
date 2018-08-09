@@ -11,10 +11,6 @@
         return false;
     }
 }
-//console.log('add click event')
-//$(".searchbtn2").click(function(){ 
-//$(".searchenginespage").click();
-//});
 	</script>
 	 <?php 
         $navtitle = "Service Application Manager";
