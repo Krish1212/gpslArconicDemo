@@ -1,6 +1,10 @@
 <?php 
   $pagetitle = "Arconic Service Application | GPSL | Hydraylic Drawings";
   include_once('header.php');
+  session_start();
+  if(!$_SESSION['uname']){
+      header('Location: index.php');
+  } 
 ?>
 <body>
     <script>whereami = 'hydraulic';</script>

@@ -34,6 +34,60 @@ h2{
 		color: white;
 		font-weight: 100
 	}
+	p.loggedin{
+		position:absolute;
+		top:250px;
+		left:44px;
+		z-index:99;
+		font-size: calc(14px + 1vw);
+		display:block;
+		color:white;
+		padding:1%;
+		a{
+			text-decoration:none;
+			color:white;
+			font-size:calc(12px + 1vw);
+			border:1px solid #01B0BA;
+			background: #01B0BA;
+			padding:0 2%;
+			margin-left:10px;
+			border-radius: 3px;
+		}
+	}
+	.login{
+		position:absolute;
+		width:300px;
+		top:300px;
+		left:44px;
+		z-index:99;
+		display:block;
+		background:white;
+		border:2px solid #01B0BA;
+		h3{
+			text-align:center;
+			padding:1%;
+			margin:0;
+			margin-bottom:5px;
+			background:#01B0BA;
+		}
+		input{
+			width:96%;
+			line-height:1em;
+			font-size:20px;
+			margin:2%;
+			padding:1%
+		}
+		input[type="submit"]{
+			margin:2%;
+			padding:1%;
+			width:96%;
+			font-size:1em;
+			font-weight:bold;
+			border:1px solid #01B0BA;
+			border-radius:10px;
+			background:#01B0BA;
+		}
+	}
 	.ft_wrap{
 		position: absolute;
 		bottom: 24px;
