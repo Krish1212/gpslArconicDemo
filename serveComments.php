@@ -1,11 +1,19 @@
 <?php
+
+session_start();
+if(!$_SESSION['uname']) die();
+
+$username = $_SESSION['uname'];
+
 header('Content-Type: application/json');
 class DComment {
     public $data = '';
+    public $user = '';
     public $coor = [];
 }
 class MComment {
     public $data = '';
+    public $user = '';
 }
 $jFile = "data/comments.json";
 $jsonData = json_decode(file_get_contents($jFile),true);
@@ -30,7 +38,15 @@ function getAllComments() {
     $page = $_POST['page'];
     try{
         $pageData = $GLOBALS['jsonData'][$page];
-        echo json_encode($pageData);
+        $newjson = [];
+        foreach($pageData as $key => $arr) {
+            if($key != "url" && $arr['user'] == $GLOBALS['username']){ // include only the logged in user and skip url field
+            //if($arr['user'] == $GLOBALS['username']){ // include only the logged in user
+                unset($arr['user']); // remove user field
+                $newjson[] = $arr;
+            }
+        }
+        echo json_encode($newjson);
     }catch(Exception $e){
         echo 'Error: ' . $e->getMessage();
     }
@@ -58,10 +74,12 @@ function putComment(){
         case 'hydraulic':
             $jsonObj = new DComment();
             $jsonObj->data = $data;
+            $jsonObj->user = $GLOBALS['username'];
             $jsonObj->coor = $coor;
         break;
         case 'machinery':
             $jsonObj = new MComment();
+            $jsonObj->user = $GLOBALS['username'];
             $jsonObj->data = $data;
         break;
     }
