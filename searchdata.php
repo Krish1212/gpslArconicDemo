@@ -18,10 +18,10 @@
         include_once('navbar.php');
     ?>
 
-<div style="width:80%;margin:0 auto;margin-top:12px;">
+<div style="display:block;width:80%;margin:0 auto;margin-top:12px;">
 
 <?php $search = $_GET ['search']; ?>
-<span style='display:inline-block;color:black;font-size:20px;font-family:"sans-serif";margin-top:5px;margin-bottom:15px;'>Search Result for <b><span style='color:#01B0BA;'><?php echo $search?></span></b>:</span>
+<span style='display:block;color:black;font-size:20px;font-family:"sans-serif";margin-top:5px;margin-bottom:15px;'>Search Result for <b><span style='color:#01B0BA;'><?php echo $search?></span></b>:</span>
 
 <?php
 $filepath = 'data/comments.json';

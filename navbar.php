@@ -1,6 +1,8 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="header">
     <div class="logo"><a href="/"><img src="images/logo.svg" alt=""></a></div>
     <div class="title"><?= isset($navtitle) ? $navtitle : ""?></div>
+
     <?php if(isset($from) && $from == "purchase") {?>
         <div class="cart-container">
             <div class="cart">
@@ -12,14 +14,10 @@
 </div>
 <?php if(isset($from) && ($from == "machinery" || $from == "plant" || $from == 'wiring' || $from == 'hydraulic' || $from == 'pdf-viewer' || $from == 'search')) {?>
 <div class="search-container">
-	<div class="searchbox">
-		<form name="sform" action='searchdata.php' method='GET' onsubmit="return validateForm()">
-			<input type='text' size='50' name='search' placeholder="Search in Application...">
-				<div class="searchbtn2">
-				<input type='submit' name='submit' value=''>
-				</div>
+		<form class="searchform" action="searchdata.php" method="GET" onsubmit="return validateForm()" style="max-width:200px">
+			<input type="text" placeholder="Search.." name="search">
+			<button type="submit"><i class="fa fa-search"></i></button>
 		</form>
-	  </div>
 </div>
 <div class="cart-container">
     <div class="cart">
@@ -27,6 +25,8 @@
         <img src="images/cart.svg" alt="">
     </div>
     <span class="item-count"></span>
+</div>
+<div style="clear:left;">
 </div>
 
 <?php } ?>
