@@ -91,6 +91,17 @@
                 overflow:auto;
                 p{
                     padding:1%;
+                span.user-info{
+                    // float:right;
+                    font-size:14px;
+                    margin-left:10px;
+                    // color:rgba(255,0,0,0.75);
+                    white-space: nowrap;
+                    color: #01B0BA;
+                    background:white;
+                    font-weight:700;
+                    font-style: italic;
+                    }
                 }
             }
         }

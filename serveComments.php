@@ -39,14 +39,15 @@ function getAllComments() {
     try{
         $pageData = $GLOBALS['jsonData'][$page];
         $newjson = [];
-        foreach($pageData as $key => $arr) {
+        /*foreach($pageData as $key => $arr) {
             if($key != "url" && $arr['user'] == $GLOBALS['username']){ // include only the logged in user and skip url field
             //if($arr['user'] == $GLOBALS['username']){ // include only the logged in user
                 unset($arr['user']); // remove user field
                 $newjson[] = $arr;
             }
-        }
-        echo json_encode($newjson);
+        }*/
+        //echo json_encode($newjson);
+        echo json_encode($pageData);
     }catch(Exception $e){
         echo 'Error: ' . $e->getMessage();
     }

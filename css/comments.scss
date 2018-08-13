@@ -50,6 +50,7 @@
             }
             .comment-list{
                 padding-top:12px;
+                // background:white;
                 overflow-y: scroll;
                 padding-right: 17px;
                 box-sizing: content-box;
@@ -58,16 +59,30 @@
             .comment-list-item{
                 margin-bottom: 12px;
                 border: 1px solid grey;
+                // border:1px solid white;
                 resize: none;
                 background: white;
                 padding: 8px;
                 color: #444;
                 width: 100%;
-                height: 78px;
+                // height: 78px;
+                height:auto;
                 border-radius: 4px;
-                -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-                -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-                box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
+                -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+                box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+                span.user-info{
+                    // text-align:right;
+                    margin-left:10px;
+                    white-space: nowrap;
+                    font-size:14px;
+                    color:rgba(255,0,0,0.75);
+                    color: #01B0BA;
+                    background:white;
+                    font-weight:700;
+                    font-style: italic;
+                    // display:block;
+                }
             }
             .show-more{
                 margin:0;

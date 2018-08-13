@@ -13,7 +13,8 @@
         <div class="comments show-comment-wrap wrapper stop-propagation">
             <div class="popup-close" title="Close"></div>
             <div class="comment-list">
-                <textarea class="comment-list-item" data-idx="#idx" spellcheck="false">#data</textarea>
+                <!-- <textarea class="comment-list-item" data-idx="#idx" spellcheck="false">#data</textarea> -->
+                <div class="comment-list-item" data-idx="#idx" spellcheck="false">#data<span class="user-info">-Posted by #username</span></div>
             </div>
             <button class="btn btn-primary show-more">Close</button>
         </div>

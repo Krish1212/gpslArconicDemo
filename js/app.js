@@ -107,7 +107,7 @@ function onMachinerypageload(){
                 var comments = '';
                 $.each(result, function(idx,obj){
                     if (idx === 'url') return;
-                    comments += '<p>' + obj.data + '</p>';
+                    comments += '<p>' + obj.data + '<span class="user-info">-Added by ' + obj.user + '</span></p>';
                 });
                 $('.wiring.comments-list').html(comments);
                 $.ajax({
@@ -120,7 +120,7 @@ function onMachinerypageload(){
                         var comments = '';
                         $.each(response, function(idx,obj){
                             if(idx === 'url') return;
-                            comments += '<p>' + obj.data + '</p>';
+                            comments += '<p>' + obj.data + '<span class="user-info">-Added by ' + obj.user + '</span></p>';
                         });
                         $('.hydraulic.comments-list').html(comments);
                     },
@@ -180,7 +180,7 @@ function onMachinerypageload(){
                     var _html = "";
                     $.each(res, function(idx, item){
                         if(idx != "url"){
-                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx);
+                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx).replace(/#username/g,item.user);
                         }
                     });
                     listWrap.html(_html);
@@ -365,7 +365,7 @@ function dragSupport(){
                     var _html = "";
                     $.each(res, function(idx, item){
                         if(idx != "url"){
-                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx);
+                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx).replace(/#username/g,item.user);
                         }
                     });
                     listWrap.html(_html);
