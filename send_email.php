@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-    $to = "krishnamoorthy@gpsl.co";
+    $to = "jstevenson@gpsl.co";
     $subject = "Parts purchase order - cart list";
     $fromName = "MB";
     $fromEmail = "mbakos@gpsl.co";

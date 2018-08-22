@@ -4,7 +4,7 @@
 
   session_set_cookie_params(604800,'/');
   session_start();
-  $userdetails = array('gpsl' => 'gpsl123','user' => 'user123');
+  $userdetails = array('gpsl' => 'gpsl123','user' => 'user123','greg'=>'greg123');
   if(isset($_GET['logout'])) {
     $_SESSION['uname'] = '';
     header('Location: ' . $_SERVER['PHP_SELF']);

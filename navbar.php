@@ -12,21 +12,23 @@
         </div>
     <?php } ?>
 </div>
-<?php if(isset($from) && ($from == "machinery" || $from == "plant" || $from == 'wiring' || $from == 'hydraulic' || $from == 'pdf-viewer' || $from == 'search')) {?>
+<?php if(isset($from) && ($from != 'viewcart')){?> 
 <div class="search-container">
 		<form class="searchform" action="searchdata.php" method="GET" onsubmit="return validateForm()" style="max-width:200px">
 			<input type="text" placeholder="Search.." name="search">
 			<button type="submit"><i class="fa fa-search"></i></button>
 		</form>
 </div>
+<?php } ?>
+<?php if(isset($from) && ($from == 'wiring' || $from == 'hydraulic' || $from == 'pdf-viewer')) {?>
 <div class="cart-container">
     <div class="cart">
-        <a href="purchase.php">Parts Shop </a>
+        <!-- <a href="purchase.php">Parts Shop </a> -->
+        <a href="viewcart.php">View Cart </a>
         <img src="images/cart.svg" alt="">
     </div>
     <span class="item-count"></span>
 </div>
+<?php } ?>
 <div style="clear:left;">
 </div>
-
-<?php } ?>

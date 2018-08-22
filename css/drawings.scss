@@ -2,25 +2,100 @@
     position: relative;
     margin-top:12px;
     .leftbar{
-        float:left;
+        // float:left;
         display: block;
         position: relative;
-        width: 20%;
-        vertical-align: top;
+        width:100%;
+        // width: 20%;
+        // vertical-align: top;
         text-align: center;
     }
+    .wire.part1{
+        position:absolute;
+        top:calc(60px + 6.4%);
+        left:78.4%;
+        width:20.3%;
+        height:2.5%;
+        z-index:97;
+    }
+    .wire.part2{
+        position:absolute;
+        top:calc(74px + 16%);
+        left:78.5%;
+        width:20%;
+        height:2.5%;
+        z-index:97;
+    }
+    .wire.area1{
+        position:absolute;
+        top:calc(50px + 16%);
+        left:32.6%;
+        width:7.5%;
+        height:10.3%;
+        z-index:97;
+    }
+    .wire.area2{
+        position:absolute;
+        top:calc(50px + 45%);
+        left:36%;
+        width:8%;
+        height:9.7%;
+        z-index:97;
+    }
+    .draw.part1{
+        position:absolute;
+        top:calc(60px + 4.8%);
+        left:47.5%;
+        width:46.7%;
+        height:1.5%;
+        z-index:97;
+    }
+    .draw.part2{
+        position:absolute;
+        top:calc(74px + 16%);
+        left:47.5%;
+        width:46.7%;
+        height:1.5%;
+        z-index:97;
+    }
+    .draw.area1{
+        position:absolute;
+        top:calc(50px + 16%);
+        left:12.1%;
+        width:7.5%;
+        height:6.7%;
+        z-index:97;
+    }
+    .draw.area2{
+        position:absolute;
+        top:calc(50px + 26%);
+        left:12.1%;
+        width:7.5%;
+        height:6.7%;
+        z-index:97;
+    }
+    .target{
+        border:1px dashed red;
+        background:rgba(1, 176, 186, 0.2);
+    }
+    .boxer a{
+        position: inherit;
+        width:100%;
+        height:100%;
+        cursor:pointer;
+    }
     #canvas{
-        float:left;
+        // float:left;
         display: block;
         position: relative;
-        width:80%;
+        width:100%;
         border-left:1px solid #cccccc;
         padding-left: 6px;
-        text-align: left;
+        // text-align: left;
         z-index: 96;
         img{
-            width: 96%;
-            max-width: 100%;
+            width: 100%;
+            // max-width: 100%;
             height: auto;
             z-index: 97;
         }
@@ -43,8 +118,11 @@
                 font-size: 13px;
             }
         }
-        #canvas{
-            width:95%;
+        .draw.part2{
+            top: calc(60px + 16%);
+        }
+    #canvas{
+            width:100%;
         }
     }
 }

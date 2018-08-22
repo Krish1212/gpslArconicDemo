@@ -453,6 +453,12 @@ function dragSupport(){
         document.body.style.cursor = "crosshair";
         $('#canvas').css({border:'3px dotted red'});
     });
+    $('.boxer').bind('click', function(ev){
+        //ev.stopPropagation();
+        $(this).addClass('target');
+        var target = $(this).children('a').attr('data-id');
+        $(this).parents('.drawings').children("." + target).addClass('target');
+    });
 }
 
 function onviewcartPageload(){
@@ -470,9 +476,9 @@ function onviewcartPageload(){
                 $('#checkout').text('Checkout').addClass('active').removeClass('process');
             },
             success: function(result){
-                console.log(result);
+                console.log('result > ' + result);
                 if(result.success){
-                    alert('Cart items emailed to: mbakos@gpsl.co');
+                    alert('Cart items emailed to: jstevenson@gpsl.co');
                 } else {
                     alert(result.message);
                 }
