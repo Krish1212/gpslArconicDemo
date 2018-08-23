@@ -359,18 +359,22 @@ function dragSupport(){
                     // hide all highlights
                     $('#canvas .rect, #canvas .comments').fadeOut();
 
-                    wrap.append(showCommentHTML);
+                    /* wrap.append(showCommentHTML);
                     var listWrap = wrap.find('.comment-list');
                     var template = listWrap.html();
-                    var _html = "";
+                    var _html = ""; */
                     $.each(res, function(idx, item){
+                        console.log(item.coor);
                         if(idx != "url"){
-                            _html += template.replace(/#data/g, item.data).replace(/#idx/g, idx).replace(/#username/g,item.user);
+                            // var newtop = (item.coor[0] * canvasW)
+                            var commbox = '<div class="dcomment rect" style="position:absolute;top:' + item.coor[0] + 'px;left:' + item.coor[1] + 'px;width:' + (item.coor[2]) + 'px;height:' + (item.coor[3]) + 'px;"><p class="tooltip">' + item.data + '</p></div>';
+                            $('#canvas').append(commbox);
+                            //_html += template.replace(/#data/g, item.data).replace(/#idx/g, idx).replace(/#username/g,item.user);
                         }
                     });
-                    listWrap.html(_html);
+                    /* listWrap.html(_html);
                     wrap.find('.show-comment-wrap').fadeIn();
-                    $(this).prop('disabled', true);
+                    $(this).prop('disabled', true); */
                 },
                 error: function(err){
                     alert(err);
@@ -379,6 +383,13 @@ function dragSupport(){
             });
         }
     });
+    $('#canvas').on('mouseover', '.dcomment', function(){
+        $(this).children('p').css({'display':'block','z-index':99});
+    });
+    $('#canvas').on('mouseout', '.dcomment', function(){
+        $(this).children('p').css({'display':'none'});
+    });
+
 
     $('body').on('mousedown', '#canvas .add-comment-wrap .save-comment', function(ev){
         console.log('save comments');

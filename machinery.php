@@ -18,7 +18,7 @@
         <div class="item machine">
             <a href="wiring.php">
                 <p>Wiring Diagram</p>
-                <img src="./images/wiring_diagram.png" alt="Wiring Diagram" width="100" height="100">
+                <img src="images/drawings/wiring_diagram_1.jpg" alt="Wiring Diagram" width="100" height="100">
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>
@@ -29,7 +29,7 @@
         <div class="item machine">
             <a href="hydraulic.php">
                 <p>Hydraulic Drawing</p>
-                <img src="./images/hydraulic_drawing.png" alt="Hydraulic Drawing" width="100" height="100">
+                <img src="images/drawings/hydraulic_drawing.jpg" alt="Hydraulic Drawing" width="100" height="100">
             </a>
             <div class="comments-block">
                 <h3>Comments</h3>

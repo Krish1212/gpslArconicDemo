@@ -42,7 +42,7 @@ function validateForm() {
 <div class="branding-new">
   <div class="title">Service <br>Application</div>
   <?php if($_SESSION['uname']): ?>
-    <p class="loggedin">Welcome <?= $_SESSION['uname'];?> <a href="?logout=1">Logout</a></p>
+    <p class="loggedin">Welcome <?= ucfirst($_SESSION['uname']);?> <a href="?logout=1">Logout</a></p>
   <?php endif; ?>
   <?php if(!$_SESSION['uname']){ ?>
     <div class="login">

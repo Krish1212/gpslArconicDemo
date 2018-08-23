@@ -12,32 +12,32 @@
     }
     .wire.part1{
         position:absolute;
-        top:calc(60px + 6.4%);
-        left:78.4%;
-        width:20.3%;
-        height:2.5%;
+        top:calc(60px + 6%);
+        left:67.7%;
+        width:28.2%;
+        height:2%;
         z-index:97;
     }
     .wire.part2{
         position:absolute;
-        top:calc(74px + 16%);
-        left:78.5%;
-        width:20%;
-        height:2.5%;
+        top:calc(74px + 16.4%);
+        left:67.5%;
+        width:28.6%;
+        height:2%;
         z-index:97;
     }
     .wire.area1{
         position:absolute;
-        top:calc(50px + 16%);
-        left:32.6%;
+        top:calc(50px + 12%);
+        left:40.6%;
         width:7.5%;
         height:10.3%;
         z-index:97;
     }
     .wire.area2{
         position:absolute;
-        top:calc(50px + 45%);
-        left:36%;
+        top:calc(50px + 64%);
+        left:40%;
         width:8%;
         height:9.7%;
         z-index:97;
@@ -105,6 +105,19 @@
             background-color: rgba(255, 255, 0, 0.05);
             z-index: 98;
         }
+        .tooltip{
+            display:none;
+            width:300px;
+            height:auto;
+            padding:10px;
+            position:absolute;
+            font-size:calc(10px + 0.5vw);
+            top:5px;
+            left:20px;
+            background:#01B0BA;
+            color:white;
+            // z-index:inherit;
+        }
     }
 }
 
@@ -118,6 +131,9 @@
                 font-size: 13px;
             }
         }
+        .wire.area2{top:calc(30px + 64%);}
+        .wire.part1{top:calc(55px + 6%);}
+        .wire.part2{top:calc(60px + 16.6%);}
         .draw.part2{
             top: calc(60px + 16%);
         }
