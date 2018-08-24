@@ -294,6 +294,7 @@ function dragSupport(){
             if( $(canvas).width() - pos < addCommentWidth){ // place on the left
                 pos = boxOffset.left - addCommentWidth - 26 - canvasOffset.left;
             }
+            var left = boxOffset.left;
             var top = boxOffset.top - canvasOffset.top;
             $(canvas).find(".comments.add-comment-wrap").css({
                 top : top,
@@ -302,7 +303,9 @@ function dragSupport(){
 
             // store coordinates
             // coordinates = [top, left, width, height]
-            coordinates = [top, pos, boxWidth, boxHeight];
+            top = Math.round((top/$('#canvas').height()) * 100).toFixed(2);
+            left = Math.round((left/$('#canvas').width()) * 100).toFixed(2);
+            coordinates = [top, left, boxWidth, boxHeight];
 
             element = null;
             isDragged = false;
@@ -367,7 +370,7 @@ function dragSupport(){
                         console.log(item.coor);
                         if(idx != "url"){
                             // var newtop = (item.coor[0] * canvasW)
-                            var commbox = '<div class="dcomment rect" style="position:absolute;top:' + item.coor[0] + 'px;left:' + item.coor[1] + 'px;width:' + (item.coor[2]) + 'px;height:' + (item.coor[3]) + 'px;"><p class="tooltip">' + item.data + '</p></div>';
+                            var commbox = '<div class="dcomment rect" style="position:absolute;top:' + item.coor[0] + '%;left:' + (item.coor[1]) + '%;width:' + (item.coor[2]) + 'px;height:' + (item.coor[3]) + 'px;"><p class="tooltip">' + item.data + '</p></div>';
                             $('#canvas').append(commbox);
                             //_html += template.replace(/#data/g, item.data).replace(/#idx/g, idx).replace(/#username/g,item.user);
                         }
@@ -383,7 +386,10 @@ function dragSupport(){
             });
         }
     });
-    $('#canvas').on('mouseover', '.dcomment', function(){
+    $('#canvas').on('mouseover', '.dcomment', function(ev){
+        if(/android|webos|ipad|iphone/i.test(navigator.userAgent.toLowerCase())){
+            ev.stopPropagation();
+        }
         $(this).children('p').css({'display':'block'}).css({'z-index':99});
     });
     $('#canvas').on('mouseout', '.dcomment', function(){
