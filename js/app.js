@@ -384,12 +384,19 @@ function dragSupport(){
         }
     });
     $('#canvas').on('mouseover', '.dcomment', function(){
-        $(this).children('p').css({'display':'block','z-index':99});
+        $(this).children('p').css({'display':'block'}).css({'z-index':99});
     });
     $('#canvas').on('mouseout', '.dcomment', function(){
         $(this).children('p').css({'display':'none'});
     });
-
+    $('body').on('click','.drawings .clear-comments', function(){
+        $('.drawings #canvas').find('.rect').remove();
+        $('.drawings').find('.boxer').removeClass('target');
+    });
+    $('.addtocart').bind('click', function(ev){
+        ev.stopPropagation();
+        $(this).attr('data-content','Added to cart');
+    });
 
     $('body').on('mousedown', '#canvas .add-comment-wrap .save-comment', function(ev){
         console.log('save comments');

@@ -25,14 +25,17 @@
             <div class="btn btn-primary prev-comments">
                 Previous Comments
             </div>
+            <div class="btn btn-primary clear-comments">
+                Clear highlights
+            </div>
             <div class="btn btn-primary flush-bottom" onclick="history.back()">
                 << Back
             </div>
         </div>
         <div class="draw boxer area1"><a data-id="part1"></a></div>
         <div class="draw boxer area2"><a data-id="part2"></a></div>
-        <div class="draw boxer part1"><a data-id="area1"></a></div>
-        <div class="draw boxer part2"><a data-id="area2"></a></div>
+        <div class="draw boxer part1"><a data-id="area1"></a><span class="addtocart" data-content="Add to cart"></span></div>
+        <div class="draw boxer part2"><a data-id="area2"></a><span class="addtocart" data-content="Add to cart"></span></div>
         <div id="canvas" draggable="false">
             <img src="images/drawings/hydraulic_drawing.jpg" alt="" draggable="false">
         </div>

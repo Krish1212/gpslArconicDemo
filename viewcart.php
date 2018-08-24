@@ -18,7 +18,7 @@
         <?php 
             //$cartItems = json_decode($_POST['cartItems']);
             //For demo purpose, the values are hard coded
-            $cartItems = array(array("prod-id"=>"1","product-quantity"=>"1","product-no"=>"0435423","product-code"=>"2573","product-photo"=>"images\/placeholder.png","product-id"=>"Fabricated Item","product-desc"=>"Accumulator Mounting Frame"),array("prod-id"=>"10","product-quantity"=>"1","product-no"=>"","product-code"=>"2601","product-photo"=>"images\/placeholder.png","product-id"=>"Special Paint","product-desc"=>"Paint for Phosfate Ester Fluid"));
+            $cartItems = array(array("prod-id"=>"1","product-quantity"=>"1","product-no"=>"0435423","product-code"=>"2573","product-photo"=>"images\/placeholder.png","product-id"=>"Fabricated Item","product-desc"=>"Accumulator Mounting Frame"),array("prod-id"=>"2","product-quantity"=>"1","product-no"=>"","product-code"=>"","product-photo"=>"images\/placeholder.png","product-id"=>"","product-desc"=>"12\" Prefill Valve-Tank Mounted with Built-In Decompression"));
             //echo json_encode($cartItems);
             //To display on the web page
             $prodTable = "<table><tr><th>Item</th><th>No. Reqd.</th><th>List No.</th><th>Prod. code</th><th>Item Ordering Id.</th><th>Description</th><th>Unit List Price</th><th>% Osct Cust.</th></tr>";

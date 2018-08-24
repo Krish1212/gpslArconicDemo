@@ -9,6 +9,10 @@
         // width: 20%;
         // vertical-align: top;
         text-align: center;
+        .btn{
+            width:20%;
+            padding:1% 2%;
+        }
     }
     .wire.part1{
         position:absolute;
@@ -21,8 +25,8 @@
     .wire.part2{
         position:absolute;
         top:calc(74px + 16.4%);
-        left:67.5%;
-        width:28.6%;
+        left:67.7%;
+        width:28.2%;
         height:2%;
         z-index:97;
     }
@@ -44,7 +48,7 @@
     }
     .draw.part1{
         position:absolute;
-        top:calc(60px + 4.8%);
+        top:calc(60px + 5%);
         left:47.5%;
         width:46.7%;
         height:1.5%;
@@ -74,9 +78,31 @@
         height:6.7%;
         z-index:97;
     }
+    .boxer .addtocart{
+        position:relative;
+        font-size:14px;
+        top:-5px;
+        left:-20%;
+        padding:0.3% 2.5%;
+        color:white;
+        border-radius: 10px;
+        border:1px solid white;
+        background: #01B0BA;
+        text-decoration: underline;
+        display:none;
+    }
+    .boxer.draw .addtocart{
+        left:-13%;
+    }
+    .boxer .addtocart:before{
+        content: attr(data-content);
+    }
     .target{
         border:1px dashed red;
         background:rgba(1, 176, 186, 0.2);
+        .addtocart{
+            display:inline-block;
+        }
     }
     .boxer a{
         position: inherit;
@@ -134,12 +160,43 @@
         .wire.area2{top:calc(30px + 64%);}
         .wire.part1{top:calc(55px + 6%);}
         .wire.part2{top:calc(60px + 16.6%);}
-        .draw.part2{
-            top: calc(60px + 16%);
+        .draw.part2{top: calc(60px + 16%);}
+        .boxer .addtocart{
+            top:-8px;
+            left:-15px;
         }
-    #canvas{
+        #canvas{
             width:100%;
         }
     }
 }
+@media only screen and (min-device-width: 601px) and (max-device-width:1024px) and (orientation: landscape){
+    .drawings {
+        .draw.part1{
+            top: calc(60px + 4.5%);
+        }
+        .draw.part2{
+            top: calc(74px + 15.2%);
+        }
+        .wire.part1{
+            top: calc(60px + 5%);
+        }
+        .wire.part2{
+            top: calc(60px + 17.5%);
+        }
+        .boxer.wire .addtocart{
+            left:-30%;
+        }
+        .boxer.draw .addtocart{
+            left:-20%;
+        }
+    }   
+}
 
+@media only screen and (device-width:812px) and (orientation: landscape){
+    .drawings {
+        .boxer .addtocart{
+            left:-34%;
+        }
+    }   
+}
