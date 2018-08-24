@@ -12,5 +12,10 @@ if($pagename != "Machinery"){
     //echo '<a href="' .$pagename .'">' . $pagename . '</a>';
 	echo " \ $curpagename ";
 }
+else
+{
+    echo " \ <span style='font-size:14px;color:#0000EE;'>Machinery";
+	
+}
 ?>
 </div>
