@@ -82,7 +82,7 @@
         position:relative;
         font-size:14px;
         top:-5px;
-        left:-20%;
+        left:-28%;
         padding:0.3% 2.5%;
         color:white;
         border-radius: 10px;
@@ -92,7 +92,7 @@
         display:none;
     }
     .boxer.draw .addtocart{
-        left:-13%;
+        left:-19%;
     }
     .boxer .addtocart:before{
         content: attr(data-content);
@@ -185,10 +185,10 @@
             top: calc(60px + 17.5%);
         }
         .boxer.wire .addtocart{
-            left:-30%;
+            left:-35%;
         }
         .boxer.draw .addtocart{
-            left:-20%;
+            left:-22%;
         }
     }   
 }

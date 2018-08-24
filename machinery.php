@@ -2,6 +2,7 @@
   $pagetitle = "Arconic Service Application | GPSL | Machines";
   include_once('header.php'); 
   session_start();
+  $_SESSION['pageid'] = '';
   if(!$_SESSION['uname']){
       header('Location: index.php');
   } 

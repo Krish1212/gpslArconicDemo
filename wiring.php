@@ -2,6 +2,7 @@
   $pagetitle = "Arconic Service Application | GPSL | Wiring Diagram";
   include_once('header.php');
   session_start();
+  $_SESSION['pageid'] = 'wiring';
   if(!$_SESSION['uname']){
       header('Location: index.php');
   }

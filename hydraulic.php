@@ -2,6 +2,7 @@
   $pagetitle = "Arconic Service Application | GPSL | Hydraylic Drawings";
   include_once('header.php');
   session_start();
+  $_SESSION['pageid'] = 'hydraulic';
   if(!$_SESSION['uname']){
       header('Location: index.php');
   } 
