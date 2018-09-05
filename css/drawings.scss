@@ -16,24 +16,24 @@
     }
     .wire.part1{
         position:absolute;
-        top:calc(60px + 6%);
-        left:67.7%;
-        width:28.2%;
-        height:2%;
+        top:calc(60px + 13%);
+        left:58%;
+        width:40.5%;
+        height:2.5%;
         z-index:97;
     }
     .wire.part2{
         position:absolute;
-        top:calc(74px + 16.4%);
-        left:67.7%;
-        width:28.2%;
-        height:2%;
+        top:calc(74px + 30%);
+        left:58%;
+        width:40.5%;
+        height:2.5%;
         z-index:97;
     }
     .wire.area1{
         position:absolute;
-        top:calc(50px + 12%);
-        left:40.6%;
+        top:calc(50px + 15%);
+        left:31%;
         width:7.5%;
         height:10.3%;
         z-index:97;
@@ -41,7 +41,7 @@
     .wire.area2{
         position:absolute;
         top:calc(50px + 64%);
-        left:40%;
+        left:38%;
         width:8%;
         height:9.7%;
         z-index:97;
@@ -79,10 +79,11 @@
         z-index:97;
     }
     .boxer .addtocart{
+        cursor: default;
         position:relative;
         font-size:14px;
         top:-5px;
-        left:-28%;
+        left:-21.5%;
         padding:0.3% 2.5%;
         color:white;
         border-radius: 10px;
@@ -132,20 +133,28 @@
             z-index: 98;
         }
         .dcomment{
-            background-color:rgba(255, 0, 0, 0.2)
+            background-color:rgba(255, 0, 0, 0.2);
+            z-index:99;
         }
         .tooltip{
             display:none;
             width:300px;
             height:auto;
             padding:10px;
-            position:absolute;
-            font-size:calc(10px + 0.5vw);
+            position:relative;
+            font-size:calc(5px + 0.5vw);
             top:5px;
             left:20px;
             background:#01B0BA;
             color:white;
-            // z-index:inherit;
+            z-index:500;
+            span.user-info{
+                margin-left:10px;
+                white-space: nowrap;
+                color:#000;
+                background:white;
+                font-weight:700;
+            }
         }
     }
 }
@@ -161,12 +170,14 @@
             }
         }
         .wire.area2{top:calc(30px + 64%);}
-        .wire.part1{top:calc(55px + 6%);}
-        .wire.part2{top:calc(60px + 16.6%);}
+        .wire.part1{top:calc(56px + 13%);}
+        .wire.part2{top:calc(56px + 29.8%);}
         .draw.part2{top: calc(60px + 16%);}
         .boxer .addtocart{
+            font-size:0.5em;
             top:-8px;
-            left:-15px;
+            // left:-15px;
+            left:-61px;
         }
         #canvas{
             width:100%;

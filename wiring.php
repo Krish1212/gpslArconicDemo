@@ -38,7 +38,7 @@
         <div class="wire boxer part1"><a data-id="area1"></a><span class="addtocart" data-content="Add to cart"></span></div>
         <div class="wire boxer part2"><a data-id="area2"></a><span class="addtocart" data-content="Add to cart"></span></div>
         <div id="canvas" draggable="false">
-            <img src="images/drawings/wiring_diagram_1.jpg" alt="" draggable="false">
+            <img src="images/drawings/wiring_trim1.jpg" alt="" draggable="false">
         </div>
     </div>
 

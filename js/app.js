@@ -336,7 +336,7 @@ function dragSupport(){
 
     $('body').on('mousedown', '.drawings .prev-comments', function(ev){
         console.log('previous comments');
-
+        $(this).css({'pointer-events':'none'});
         if(whereami == null){
             console.log("ERROR: Feed in the whereami variable");
             return;
@@ -370,7 +370,7 @@ function dragSupport(){
                         console.log(item.coor);
                         if(idx != "url"){
                             // var newtop = (item.coor[0] * canvasW)
-                            var commbox = '<div class="dcomment rect" style="position:absolute;top:' + item.coor[0] + '%;left:' + (item.coor[1]) + '%;width:' + (item.coor[2]) + 'px;height:' + (item.coor[3]) + 'px;"><p class="tooltip">' + item.data + '</p></div>';
+                            var commbox = '<div class="dcomment rect" style="position:absolute;top:' + item.coor[0] + '%;left:' + (item.coor[1]) + '%;width:' + (item.coor[2]) + 'px;height:' + (item.coor[3]) + 'px;"><p class="tooltip">' + item.data + '<span class="user-info">-Added by ' + item.user + '</span></p></div>';
                             $('#canvas').append(commbox);
                             //_html += template.replace(/#data/g, item.data).replace(/#idx/g, idx).replace(/#username/g,item.user);
                         }
@@ -390,7 +390,7 @@ function dragSupport(){
         if(/android|webos|ipad|iphone/i.test(navigator.userAgent.toLowerCase())){
             ev.stopPropagation();
         }
-        $(this).children('p').css({'display':'block'}).css({'z-index':99});
+        $(this).children('p').css({'display':'block'});
     });
     $('#canvas').on('mouseout', '.dcomment', function(){
         $(this).children('p').css({'display':'none'});
@@ -398,6 +398,7 @@ function dragSupport(){
     $('body').on('click','.drawings .clear-comments', function(){
         $('.drawings #canvas').find('.rect').remove();
         $('.drawings').find('.boxer').removeClass('target');
+        $('.drawings .prev-comments').css({'pointer-events':'auto'});
     });
     $('.addtocart').bind('click', function(ev){
         ev.stopPropagation();
