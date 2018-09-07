@@ -17,7 +17,7 @@
     <?php include_once('breadscrumb.php'); ?>
     <div class="machinery container">
         <div class="item machine">
-            <a href="wiring.php">
+            <a href="wiring.php" class="thumbnail">
                 <p>Wiring Diagram</p>
                 <img src="images/drawings/wiring_diagram_1.jpg" alt="Wiring Diagram" width="100" height="100">
             </a>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="item machine">
-            <a href="hydraulic.php">
+            <a href="hydraulic.php" class="thumbnail">
                 <p>Hydraulic Drawing</p>
                 <img src="images/drawings/hydraulic_drawing.jpg" alt="Hydraulic Drawing" width="100" height="100">
             </a>
@@ -40,7 +40,7 @@
         </div>
         <div class="item machine">
             <h3>Subsystems</h3>
-            <a href="vane_pump.php">
+            <a href="vane_pump.php" class="thumbnail">
                 <p>Vane pump</p>
                 <img src="./images/vane_pump.png" alt="Vane pump" width="100" height="100">
             </a>

@@ -2,7 +2,7 @@
     "wiring": {
         "url": "wiring.php",
         "1": {
-            "data": "The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed. Thus, hydraulic forces which would impose side loads on the shaft are cancelled. Hydraulic forces which would impose side loads on the shaft are cancelled. The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed.",
+            "data": "The pump cam ring is shaped so that the two pumping chambers are formed diametrically opposed. Thus, hydraulic forces which would impose side loads on the shaft are cancelled. Hydraulic forces which would impose side loads on the shaft are cancelled.",
             "user": "gpsl",
             "coor": [
                 "5",
@@ -12,7 +12,7 @@
             ]
         },
         "2": {
-            "data": "The pressure plate seals the pumping chamber as shown in Figure 3. A light spring holds the plate against the cartridge until pressure builds up in the system. System pressure is effective against the area at the back of the plate, which is larger than the area exposed to the pumping cartridge. Thus, an unbalanced force holds the plate against the cartridge, sealing the cartridge and providing the proper running clearance for the rotor and vanes.",
+            "data": "The pressure plate seals the pumping chamber as shown in Figure 3. A light spring holds the plate against the cartridge until pressure builds up in the system.",
             "user": "user",
             "coor": [
                 "37",
@@ -32,18 +32,18 @@
             ]
         },
         "4": {
-            "data": "Testing for clickable link <a target=\"_blank\" href=\"http:\/\/arconic.gpsl.co\/vane_pump.php\">http:\/\/arconic.gpsl.co\/vane_pump.php<\/a> whether this link gets save with anchor",
+            "data": "See Vane Pump PDF for procedure. <a target=\"_blank\" href=\"http:\/\/arconic.gpsl.co\/vane_pump.php\">http:\/\/arconic.gpsl.co\/vane_pump.php<\/a>",
             "user": "greg",
             "coor": [
-                "20.00",
-                "18.00",
-                "149",
-                "90"
+                "24.00",
+                "22.00",
+                "139.01083400000002",
+                "88.020834"
             ]
         },
         "5": {
-            "data": "Teseting another clickable link with <a target=\"_blank\" href=\"https:\/\/gpsl.co\/events\">https:\/\/gpsl.co\/events<\/a> to check whether this works",
-            "user": "greg",
+            "data": "Test clickable link with <a target=\"_blank\" href=\"https:\/\/gpsl.co\/events\">https:\/\/gpsl.co\/events<\/a> to check whether this works",
+            "user": "user",
             "coor": [
                 "51.00",
                 "19.00",
