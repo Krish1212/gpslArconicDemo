@@ -21,9 +21,9 @@
             $cartItems = array(array("prod-id"=>"1","product-quantity"=>"1","product-no"=>"0435423","product-code"=>"2573","product-photo"=>"images\/placeholder.png","product-id"=>"Fabricated Item","product-desc"=>"Accumulator Mounting Frame"),array("prod-id"=>"2","product-quantity"=>"1","product-no"=>"","product-code"=>"","product-photo"=>"images\/placeholder.png","product-id"=>"","product-desc"=>"12\" Prefill Valve-Tank Mounted with Built-In Decompression"));
             //echo json_encode($cartItems);
             //To display on the web page
-            $prodTable = "<table><tr><th>Item</th><th>No. Reqd.</th><th>List No.</th><th>Prod. code</th><th>Item Ordering Id.</th><th>Description</th><th>Unit List Price</th><th>% Osct Cust.</th></tr>";
+            $prodTable = "<table><tr><th>Item</th><th>No. Reqd.</th><th>List No.</th><th>Prod. code</th><th>Item Ordering Id.</th><th>Description</th><th>Unit List Price</th></tr>";
             //To use it while downloading as a CSV file
-            $thead = "\"Date\",\"" . date('Y/m/d') . "\"\n\"Item\",\"No. Reqd.\",\"List No.\",\"Prod. code\",\"Item Ordering Id.\",\"Description\",\"Unit List Price\",\"% Osct Cust.\"";
+            $thead = "\"Date\",\"" . date('Y/m/d') . "\"\n\"Item\",\"No. Reqd.\",\"List No.\",\"Prod. code\",\"Item Ordering Id.\",\"Description\",\"Unit List Price\"";
             $tbody = '';
             foreach($cartItems as $item){
                 $prodTable .= "<tr>";
@@ -33,7 +33,7 @@
                     $prodTable .= "<td>" . $value . "</td>";
                     $tbody .= '"' . $value . '",';
                 }
-                $prodTable .= "</td><td></td><td></td></tr>";
+                $prodTable .= "</td><td></td></tr>";
             }
             $content = $thead . $tbody;
             $prodTable .= "</table>";

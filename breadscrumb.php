@@ -11,7 +11,9 @@ $curpagename = '<a style="color:#0000EE;">' . $pagename . '</a>';
 if($pagename != "Machinery"){
     echo ' \ <a href="/machinery.php">Machinery</a>';
     if($pagename == 'Viewcart'){
-        if($_SESSION['pageid'] == 'hydraulic'){
+        if(!isset($_SESSION['pageid'])) {
+            echo '';
+        } else if($_SESSION['pageid'] == 'hydraulic'){
             echo ' \ <a href="/hydraulic.php">Hydraulic Drawing</a>';
         } else if ($_SESSION['pageid'] == 'wiring'){
             echo ' \ <a href="/wiring.php">Wiring Diagram</a>';

@@ -30,6 +30,26 @@
                 "71",
                 "63"
             ]
+        },
+        "4": {
+            "data": "Testing for clickable link <a target=\"_blank\" href=\"http:\/\/arconic.gpsl.co\/vane_pump.php\">http:\/\/arconic.gpsl.co\/vane_pump.php<\/a> whether this link gets save with anchor",
+            "user": "greg",
+            "coor": [
+                "20.00",
+                "18.00",
+                "149",
+                "90"
+            ]
+        },
+        "5": {
+            "data": "Teseting another clickable link with <a target=\"_blank\" href=\"https:\/\/gpsl.co\/events\">https:\/\/gpsl.co\/events<\/a> to check whether this works",
+            "user": "greg",
+            "coor": [
+                "51.00",
+                "19.00",
+                "95",
+                "71"
+            ]
         }
     },
     "hydraulic": {

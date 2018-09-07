@@ -331,7 +331,7 @@ function dragSupport(){
     });
 
     function cleanup(s){
-        return s.replace(/^\s+|\s+$/g, "");
+        return s.replace(/^\s+|\s+$/g, "").replace(/(http|https)([^\s]+)/gi,'<a target="_blank" href="$1$2">$1$2</a>');
     }
 
     $('body').on('mousedown', '.drawings .prev-comments', function(ev){
