@@ -18,7 +18,7 @@
     <div class="machinery container">
         <div class="item machine">
             <a href="wiring.php" class="thumbnail">
-                <p>Wiring Diagram</p>
+                <p>Hydraulic Diagram</p>
                 <img src="images/drawings/wiring_diagram_1.jpg" alt="Wiring Diagram" width="100" height="100">
             </a>
             <div class="comments-block">
