@@ -1,5 +1,5 @@
 <?php 
-  $pagetitle = "Arconic Service Application | GPSL | Wiring Diagram";
+  $pagetitle = "Arconic Service Application | GPSL | Hydraulic Diagram";
   include_once('header.php');
   session_start();
   $_SESSION['pageid'] = 'wiring';
@@ -11,7 +11,7 @@
     <script>whereami = 'wiring';</script>
 
     <?php 
-        $navtitle = "2500 Ton Hydraulic Press Wiring Diagram";
+        $navtitle = "2500 Ton Hydraulic Press Hydraulic Diagram";
         $from = 'wiring';
         include_once('navbar.php');
     ?>

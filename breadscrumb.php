@@ -16,7 +16,7 @@ if($pagename != "Machinery"){
         } else if($_SESSION['pageid'] == 'hydraulic'){
             echo ' \ <a href="/hydraulic.php">Hydraulic Drawing</a>';
         } else if ($_SESSION['pageid'] == 'wiring'){
-            echo ' \ <a href="/wiring.php">Wiring Diagram</a>';
+            echo ' \ <a href="/wiring.php">Hydraulic Diagram</a>';
         }
     }
 	echo " \ $curpagename ";

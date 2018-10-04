@@ -1,5 +1,5 @@
 <?php 
-  $pagetitle = "Arconic Service Application | GPSL | Hydraylic Drawings";
+  $pagetitle = "Arconic Service Application | GPSL | Hydraulic Drawings";
   include_once('header.php');
   session_start();
   $_SESSION['pageid'] = 'hydraulic';
