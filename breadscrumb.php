@@ -7,6 +7,7 @@ $curpagename = '';
 $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
 $pagename = ucfirst( str_replace(array(".php","_"),array(""," "),$crumbs[1]) );
 //$curpagename = "<span style='font-size:13px;color:#0000EE;'>$pagename</span>";
+$pagename = ($pagename === "Wiring") ? "Hydraulic" : $pagename;
 $curpagename = '<a style="color:#0000EE;">' . $pagename . '</a>';
 if($pagename != "Machinery"){
     echo ' \ <a href="/machinery.php">Machinery</a>';
