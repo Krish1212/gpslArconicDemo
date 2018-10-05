@@ -26,10 +26,10 @@
             header('Cache-Control: post-check=0, pre-check=0', false);
             header('Cache-Control: no-store, no-cache, must-revalidate');
             header('Pragma: no-cache');
-            header('Content-Length: '.$filesize($path));
+            header('Content-Length: '.filesize($path));
 
             // read the file from disk
-            //readfile($file);
+            readfile($path);
             $complete = 1;
             exit;
         }
