@@ -38,11 +38,11 @@
             $content = $thead . $tbody;
             $prodTable .= "</table>";
         ?>
-        <!--<a href="download.php?content=<?php echo urlencode($content);?>-->
+        <!--<?php echo urlencode($cartItems);?>-->
         <div class="cart-table"><?php echo $prodTable; ?></div>
         <button id="checkout" class="button active">Checkout</button>
         <button id="download" class="button active"><a href="download.php?content=<?php echo urlencode($content);?>" style="text-decoration:none;color:white;" target="_blank">Download As Text</a></button>
-        <button id="download" class="button active"><a href="download.php?file=work-order-template.xlsx" style="text-decoration:none;color:white;" target="_blank">Download Work Order</a></button>
+        <button id="download" class="button active"><a href="download.php?file=work-order-template.xlsx&data=<?php echo urlencode(json_encode($cartItems));?>" style="text-decoration:none;color:white;" target="_blank">Download Work Order</a></button>
         <button id="back" class="button active" onclick="history.back()"><< Back</button>
     </div>
     <?php include_once('footer.php');?>
