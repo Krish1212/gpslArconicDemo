@@ -1,5 +1,5 @@
 <?php
-    require_once('.\vendor\autoload.php');
+    require('./vendor/autoload.php');
     use PhpOffice\PhpSpreadsheet\IOFactory;
     use PhpOffice\PhpSpreadsheet\Reader;
     if(isset($_GET['content'])){
